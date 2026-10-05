@@ -10,6 +10,8 @@ Holly OS is developed by Darren “Viper” Crawford. If you enjoy the project a
 
 Thank you for helping keep Holly’s computer senility under control.
 
+[![GitHub All Releases](https://shields.io)](https://github.com)
+
 Holly boots an independently authored ARM64 kernel and presents a Red Dwarf-inspired ship computer through SSH, a browser and HDMI. It does not run Raspberry Pi OS or Linux. Official Pi boot firmware and vendored BearSSL are included dependencies, not original Holly code.
 
 ## Start here
