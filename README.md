@@ -1,5 +1,4 @@
-[![Downloads](https://img.shields.io/github/downloads/dscraw4d/Holly-AI-For-Raspberry-PI4/total?style=for-the-badge&color=brightgreen)](https://github.com/dscraw4d/Holly-AI-For-Raspberry-PI4/releases)
-# Holly AI Learning OS
+[![Downloads](https://img.shields.io/github/downloads/dscraw4d/Holly-AI-For-Raspberry-PI4/total?style=for-the-badge&color=brightgreen&v=2)](https://github.com/dscraw4d/Holly-AI-For-Raspberry-PI4/releases)
 
 **v0.49.29 - Raspberry Pi 4 fan computer**  
 By Darren "Viper" Crawford / JMC Publishing
