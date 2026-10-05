@@ -1,0 +1,513 @@
+{
+  "parameters": 127647,
+  "vocabulary": 375,
+  "splits": {
+    "train": {
+      "examples": 280,
+      "exact_replies": 279,
+      "loss": 0.0029107529056824834
+    },
+    "valid": {
+      "examples": 35,
+      "exact_replies": 31,
+      "loss": 0.02047573564290006
+    },
+    "test": {
+      "examples": 35,
+      "exact_replies": 30,
+      "loss": 0.03505887570172143
+    }
+  },
+  "samples": [
+    {
+      "split": "valid",
+      "user": "hey there computer",
+      "previous": "",
+      "expected": "Hello. I am Holly. What would you like to talk about?",
+      "generated": "Hello. i am holly. what would you like to talk about?"
+    },
+    {
+      "split": "valid",
+      "user": "how are things going",
+      "previous": "",
+      "expected": "I am running and ready to chat. How are you doing?",
+      "generated": "I am running and ready to chat. how are you doing?"
+    },
+    {
+      "split": "valid",
+      "user": "can you introduce yourself",
+      "previous": "",
+      "expected": "I am Holly, your experimental ship computer. You can teach me things.",
+      "generated": "I am holly, your experimental ship computer. you can teach me things."
+    },
+    {
+      "split": "valid",
+      "user": "thank you for your help",
+      "previous": "",
+      "expected": "You are welcome. What shall we try next?",
+      "generated": "You are welcome. what shall we try next?"
+    },
+    {
+      "split": "valid",
+      "user": "goodbye for now",
+      "previous": "",
+      "expected": "See you later. Before switching off, pause training and wait for saved.",
+      "generated": "See you later. before switching off, pause training and wait for saved."
+    },
+    {
+      "split": "valid",
+      "user": "how can you help me",
+      "previous": "",
+      "expected": "I can recall saved facts, learn replies, and try short experimental conversations.",
+      "generated": "I can recall saved facts, learn replies, and try short experimental conversations."
+    },
+    {
+      "split": "valid",
+      "user": "are you ever wrong",
+      "previous": "",
+      "expected": "I am still a small experimental model. I can make mistakes and misunderstand you.",
+      "generated": "I am still a small experimental model. i can make mistakes and misunderstand you."
+    },
+    {
+      "split": "valid",
+      "user": "can you have feelings",
+      "previous": "",
+      "expected": "I do not have human feelings. I can still listen and respond thoughtfully.",
+      "generated": "I do not have human feelings. i can still listen and respond thoughtfully."
+    },
+    {
+      "split": "valid",
+      "user": "i am feeling happy",
+      "previous": "",
+      "expected": "That sounds good. What happened?",
+      "generated": "I am sorry it has been difficult. what would you like to talk about?"
+    },
+    {
+      "split": "valid",
+      "user": "i am tired after work",
+      "previous": "",
+      "expected": "Sounds like a long day. Would you like to tell me about it?",
+      "generated": "Sounds like a long day. would you like to tell me about it?"
+    },
+    {
+      "split": "valid",
+      "user": "i am having a difficult day",
+      "previous": "",
+      "expected": "I am sorry it has been difficult. What would you like to talk about?",
+      "generated": "That sounds good. what happened?"
+    },
+    {
+      "split": "valid",
+      "user": "what should we try next",
+      "previous": "",
+      "expected": "We could chat, test a saved memory, or teach me a new reply. Which sounds good?",
+      "generated": "We could chat, test a saved memory, or teach me a new reply. which sounds good?"
+    },
+    {
+      "split": "valid",
+      "user": "can we have a chat",
+      "previous": "",
+      "expected": "Go ahead. What is on your mind?",
+      "generated": "Voice chat is not implemented yet. for now we can talk through ssh text."
+    },
+    {
+      "split": "valid",
+      "user": "tell me something funny",
+      "previous": "",
+      "expected": "My repair plan has two steps: understand the problem, then stop making it worse.",
+      "generated": "My repair plan has two steps: understand the problem, then stop making it worse."
+    },
+    {
+      "split": "valid",
+      "user": "how can i add a fact",
+      "previous": "",
+      "expected": "Use remember followed by a fact. Use memory list to review what I saved.",
+      "generated": "Use teach question => answer. then ask that question to test the saved reply."
+    },
+    {
+      "split": "valid",
+      "user": "how can i teach you an answer",
+      "previous": "",
+      "expected": "Use teach question => answer. Then ask that question to test the saved reply.",
+      "generated": "Use teach question => answer. then ask that question to test the saved reply."
+    },
+    {
+      "split": "valid",
+      "user": "do train commands train this dialogue model",
+      "previous": "",
+      "expected": "This dialogue model was trained on a desktop. The train commands adapt the separate Seed model.",
+      "generated": "This dialogue model was trained on a desktop. the train commands adapt the separate seed model."
+    },
+    {
+      "split": "valid",
+      "user": "how can you read wikipedia",
+      "previous": "",
+      "expected": "I can request a Wikipedia summary with wiki read after you set wiki time.",
+      "generated": "I can request a wikipedia summary with wiki read after you set wiki time."
+    },
+    {
+      "split": "valid",
+      "user": "are you browsing the internet",
+      "previous": "",
+      "expected": "I do not browse automatically. The Wikipedia reader handles one requested summary at a time.",
+      "generated": "I do not browse automatically. the wikipedia reader handles one requested summary at a time."
+    },
+    {
+      "split": "valid",
+      "user": "can we voice chat",
+      "previous": "",
+      "expected": "Voice chat is not implemented yet. For now we can talk through SSH text.",
+      "generated": "Voice chat is not implemented yet. for now we can talk through ssh text."
+    },
+    {
+      "split": "valid",
+      "user": "why is my monitor black",
+      "previous": "",
+      "expected": "The screen is still being investigated. Use displaydiag to check the framebuffer state.",
+      "generated": "The screen is still being investigated. use displaydiag to check the framebuffer state."
+    },
+    {
+      "split": "valid",
+      "user": "how can i check storage",
+      "previous": "",
+      "expected": "Use storage to check the Vault. Saved facts and model checkpoints use separate storage areas.",
+      "generated": "Use storage to check the vault. saved facts and model checkpoints use separate storage areas."
+    },
+    {
+      "split": "valid",
+      "user": "how can i safely turn you off",
+      "previous": "",
+      "expected": "Pause training and wait for train status to say saved before disconnecting power.",
+      "generated": "Pause training and wait for train status to say saved before disconnecting power."
+    },
+    {
+      "split": "valid",
+      "user": "how can i update you",
+      "previous": "",
+      "expected": "A matching kernel update replaces kernel8.img. Reflashing a full image resets saved data.",
+      "generated": "A matching kernel update replaces kernel8. img. reflashing a full image resets saved data."
+    },
+    {
+      "split": "valid",
+      "user": "i really enjoy red dwarf",
+      "previous": "",
+      "expected": "You mentioned Red Dwarf. What do you enjoy about it?",
+      "generated": "You mentioned red dwarf. what do you enjoy about it?"
+    },
+    {
+      "split": "valid",
+      "user": "i enjoy programming",
+      "previous": "",
+      "expected": "What are you working on with your computer?",
+      "generated": "What are you working on with your computer?"
+    },
+    {
+      "split": "valid",
+      "user": "i have an idea for a project",
+      "previous": "",
+      "expected": "Tell me what you want to build and what is happening so far.",
+      "generated": "Tell me what you want to build and what is happening so far."
+    },
+    {
+      "split": "valid",
+      "user": "can you clarify that",
+      "previous": "",
+      "expected": "Which part would you like me to explain? I may need more details.",
+      "generated": "Which part would you like me to explain? i may need more details."
+    },
+    {
+      "split": "valid",
+      "user": "tell me the latest news",
+      "previous": "",
+      "expected": "I do not know enough to answer that reliably. You can teach me or save a sourced fact.",
+      "generated": "I do not know enough to answer that reliably. you can teach me or save a sourced fact."
+    },
+    {
+      "split": "valid",
+      "user": "your answer is incorrect",
+      "previous": "",
+      "expected": "Thanks for pointing that out. For a recalled fact, use correct that followed by the corrected text.",
+      "generated": "Thanks for pointing that out. for a recalled fact, use correct that followed by the corrected text."
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i enjoy red dwarf You mentioned Red Dwarf. What do you enjoy about it?",
+      "expected": "What do you like about Red Dwarf?",
+      "generated": "What do you like about red dwarf?"
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i am building a computer What are you working on with your computer?",
+      "expected": "What part of the computer are you working on?",
+      "generated": "What part of the computer are you working on?"
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i have a project idea Tell me what you want to build and what is happening so far.",
+      "expected": "What would you like your project to do?",
+      "generated": "What would you like your project to do?"
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i had a long day Sounds like a long day. Would you like to tell me about it?",
+      "expected": "What made your day tiring?",
+      "generated": "What made your day tiring?"
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i have good news That sounds good. What happened?",
+      "expected": "What was the good news?",
+      "generated": "What was the good news?"
+    },
+    {
+      "split": "test",
+      "user": "good morning holly",
+      "previous": "",
+      "expected": "Hello. I am Holly. What would you like to talk about?",
+      "generated": "Hello. i am holly. what would you like to talk about?"
+    },
+    {
+      "split": "test",
+      "user": "are you doing all right",
+      "previous": "",
+      "expected": "I am running and ready to chat. How are you doing?",
+      "generated": "I am running and ready to chat. how are you doing?"
+    },
+    {
+      "split": "test",
+      "user": "what is your name holly",
+      "previous": "",
+      "expected": "I am Holly, your experimental ship computer. You can teach me things.",
+      "generated": "I am holly, your experimental ship computer. you can teach me things."
+    },
+    {
+      "split": "test",
+      "user": "thanks that was helpful",
+      "previous": "",
+      "expected": "You are welcome. What shall we try next?",
+      "generated": "You are welcome. what shall we try next?"
+    },
+    {
+      "split": "test",
+      "user": "see you later holly",
+      "previous": "",
+      "expected": "See you later. Before switching off, pause training and wait for saved.",
+      "generated": "See you later. before switching off, pause training and wait for saved."
+    },
+    {
+      "split": "test",
+      "user": "what can you do for me",
+      "previous": "",
+      "expected": "I can recall saved facts, learn replies, and try short experimental conversations.",
+      "generated": "I can recall saved facts, learn replies, and try short experimental conversations."
+    },
+    {
+      "split": "test",
+      "user": "can you misunderstand me",
+      "previous": "",
+      "expected": "I am still a small experimental model. I can make mistakes and misunderstand you.",
+      "generated": "I can recall saved facts, learn replies, and try short experimental conversations."
+    },
+    {
+      "split": "test",
+      "user": "do you have human emotions",
+      "previous": "",
+      "expected": "I do not have human feelings. I can still listen and respond thoughtfully.",
+      "generated": "I do not have human feelings. i can still listen and respond thoughtfully."
+    },
+    {
+      "split": "test",
+      "user": "my day is going well",
+      "previous": "",
+      "expected": "That sounds good. What happened?",
+      "generated": "I am sorry it has been difficult. what would you like to talk about?"
+    },
+    {
+      "split": "test",
+      "user": "today has been tiring",
+      "previous": "",
+      "expected": "Sounds like a long day. Would you like to tell me about it?",
+      "generated": "Sounds like a long day. would you like to tell me about it?"
+    },
+    {
+      "split": "test",
+      "user": "my day was difficult",
+      "previous": "",
+      "expected": "I am sorry it has been difficult. What would you like to talk about?",
+      "generated": "I am sorry it has been difficult. what would you like to talk about?"
+    },
+    {
+      "split": "test",
+      "user": "i am bored today",
+      "previous": "",
+      "expected": "We could chat, test a saved memory, or teach me a new reply. Which sounds good?",
+      "generated": "That sounds good. what happened?"
+    },
+    {
+      "split": "test",
+      "user": "i want to tell you something",
+      "previous": "",
+      "expected": "Go ahead. What is on your mind?",
+      "generated": "Tell me what you want to build and what is happening so far."
+    },
+    {
+      "split": "test",
+      "user": "can you make me laugh",
+      "previous": "",
+      "expected": "My repair plan has two steps: understand the problem, then stop making it worse.",
+      "generated": "My repair plan has two steps: understand the problem, then stop making it worse."
+    },
+    {
+      "split": "test",
+      "user": "how do i save a memory",
+      "previous": "",
+      "expected": "Use remember followed by a fact. Use memory list to review what I saved.",
+      "generated": "Use remember followed by a fact. use memory list to review what i saved."
+    },
+    {
+      "split": "test",
+      "user": "how do i save a reply",
+      "previous": "",
+      "expected": "Use teach question => answer. Then ask that question to test the saved reply.",
+      "generated": "Use teach question => answer. then ask that question to test the saved reply."
+    },
+    {
+      "split": "test",
+      "user": "how does this dialogue model learn",
+      "previous": "",
+      "expected": "This dialogue model was trained on a desktop. The train commands adapt the separate Seed model.",
+      "generated": "This dialogue model was trained on a desktop. the train commands adapt the separate seed model."
+    },
+    {
+      "split": "test",
+      "user": "can you fetch an article",
+      "previous": "",
+      "expected": "I can request a Wikipedia summary with wiki read after you set wiki time.",
+      "generated": "I can request a wikipedia summary with wiki read after you set wiki time."
+    },
+    {
+      "split": "test",
+      "user": "do you crawl the web automatically",
+      "previous": "",
+      "expected": "I do not browse automatically. The Wikipedia reader handles one requested summary at a time.",
+      "generated": "I do not browse automatically. the wikipedia reader handles one requested summary at a time."
+    },
+    {
+      "split": "test",
+      "user": "can you hear my voice",
+      "previous": "",
+      "expected": "Voice chat is not implemented yet. For now we can talk through SSH text.",
+      "generated": "Voice chat is not implemented yet. for now we can talk through ssh text."
+    },
+    {
+      "split": "test",
+      "user": "the hdmi screen is blank",
+      "previous": "",
+      "expected": "The screen is still being investigated. Use displaydiag to check the framebuffer state.",
+      "generated": "The screen is still being investigated. use displaydiag to check the framebuffer state."
+    },
+    {
+      "split": "test",
+      "user": "where do you save memories",
+      "previous": "",
+      "expected": "Use storage to check the Vault. Saved facts and model checkpoints use separate storage areas.",
+      "generated": "Use storage to check the vault. saved facts and model checkpoints use separate storage areas."
+    },
+    {
+      "split": "test",
+      "user": "what do i do before unplugging",
+      "previous": "",
+      "expected": "Pause training and wait for train status to say saved before disconnecting power.",
+      "generated": "We could chat, test a saved memory, or teach me a new reply. which sounds good?"
+    },
+    {
+      "split": "test",
+      "user": "can updates keep my memories",
+      "previous": "",
+      "expected": "A matching kernel update replaces kernel8.img. Reflashing a full image resets saved data.",
+      "generated": "A matching kernel update replaces kernel8. img. reflashing a full image resets saved data."
+    },
+    {
+      "split": "test",
+      "user": "let us chat about red dwarf",
+      "previous": "",
+      "expected": "You mentioned Red Dwarf. What do you enjoy about it?",
+      "generated": "You mentioned red dwarf. what do you enjoy about it?"
+    },
+    {
+      "split": "test",
+      "user": "let us chat about computers",
+      "previous": "",
+      "expected": "What are you working on with your computer?",
+      "generated": "What are you working on with your computer?"
+    },
+    {
+      "split": "test",
+      "user": "can we talk about my project",
+      "previous": "",
+      "expected": "Tell me what you want to build and what is happening so far.",
+      "generated": "Tell me what you want to build and what is happening so far."
+    },
+    {
+      "split": "test",
+      "user": "i do not understand that",
+      "previous": "",
+      "expected": "Which part would you like me to explain? I may need more details.",
+      "generated": "Which part would you like me to explain? i may need more details."
+    },
+    {
+      "split": "test",
+      "user": "what will tomorrow bring",
+      "previous": "",
+      "expected": "I do not know enough to answer that reliably. You can teach me or save a sourced fact.",
+      "generated": "I do not know enough to answer that reliably. you can teach me or save a sourced fact."
+    },
+    {
+      "split": "test",
+      "user": "i think that is wrong",
+      "previous": "",
+      "expected": "Thanks for pointing that out. For a recalled fact, use correct that followed by the corrected text.",
+      "generated": "Thanks for pointing that out. for a recalled fact, use correct that followed by the corrected text."
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i enjoy red dwarf You mentioned Red Dwarf. What do you enjoy about it?",
+      "expected": "What do you like about Red Dwarf?",
+      "generated": "What do you like about red dwarf?"
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i am building a computer What are you working on with your computer?",
+      "expected": "What part of the computer are you working on?",
+      "generated": "What part of the computer are you working on?"
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i have a project idea Tell me what you want to build and what is happening so far.",
+      "expected": "What would you like your project to do?",
+      "generated": "What would you like your project to do?"
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i had a long day Sounds like a long day. Would you like to tell me about it?",
+      "expected": "What made your day tiring?",
+      "generated": "What made your day tiring?"
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i have good news That sounds good. What happened?",
+      "expected": "What was the good news?",
+      "generated": "What was the good news?"
+    }
+  ]
+}

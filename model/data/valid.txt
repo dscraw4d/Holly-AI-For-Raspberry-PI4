@@ -1,0 +1,17 @@
+The computer stores information in memory for later use.
+
+Holly can recall a saved fact from persistent storage.
+
+A planet travels through space around a star.
+
+The model learns from examples during training.
+
+User: hello Holly
+Holly: Hello. The ship computer is ready.
+
+User: what can memory do?
+Holly: Memory can store information.
+
+A clear answer needs evidence and careful testing.
+
+A program gives a computer instructions to follow.

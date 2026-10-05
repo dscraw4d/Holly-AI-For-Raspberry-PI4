@@ -1,0 +1,44 @@
+v0.49.26 validation
+
+Normal and HDMI-disabled recovery kernels: AArch64 entry 0x80000; ELF/raw image
+match; no undefined symbols; original low-memory limit; provisioned Pi network,
+Ethernet buffers, LAN services and exact pinned SSH credentials verified.
+
+Host regression checks passed: arithmetic, 256-topic disk cache, free lookup
+fallback, old-cache migration, old Vault cache, search lifecycle/HTTP polling,
+documents, conversation, guest access, assistant, document auto-reading, news,
+Chrome voice/mic/animation/thinking interface and HTTP/TLS framing.
+
+Arithmetic: numeric and zero-through-twenty word operands; precedence/brackets,
+six-place decimals, negatives, invalid syntax, overflow, division by zero and
+20,000 deterministic malformed inputs. AddressSanitizer/UBSan passed. Leak
+checking was disabled because the execution environment disallows that mode.
+
+256-topic storage: all 256 maximum-size summary/URL pairs recalled after reboot;
+257th rejected without eviction; all four interrupted sector-write positions
+preserved the previous answer; refresh, persistent forget, slot reuse and strict
+partition bounds passed. AddressSanitizer/UBSan passed.
+
+Migration: emulated SD with existing Vault personal memory and active document
+upload; a free document slot was reserved; failed copy preserved the old cache;
+verified copy released legacy records; uploaded catalogue and user memory were
+unchanged. Internal document read/delete guards and reboot forget passed.
+
+Free lookup: empty Instant Answer response -> pending Wikipedia request -> ready
+article overview; article-prefix cleanup; source host validation; malformed,
+HTML and duplicate-field rejection; disambiguation refusal. Live Wikipedia
+Action API response (1727 bytes) fetched and parsed. This live request used the
+host execution network, not the Pi TLS stack.
+
+TLS fixtures: valid, wrong-name, expired, untrusted and RNG-failure cases passed.
+The production TLS trust store was not weakened for the host network proxy.
+
+SSH: real OpenSSH against the host byte adapter using the existing Rimmer login
+and pinned host key; arithmetic and existing dialogue controls; wrong-password
+rejection. This adapter is not a hardware Ethernet test.
+
+QEMU: one Pi 4 emulated cold boot, 111 command cycles, three-second idle soak;
+includes arithmetic, zero-division and NEWS clock gating. This is not physical
+Pi SD/Ethernet/HDMI validation. Hardware acceptance testing is pending.
+
+Evidence logs and complete source are included in the ZIP.

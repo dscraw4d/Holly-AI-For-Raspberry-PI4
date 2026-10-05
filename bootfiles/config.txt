@@ -1,0 +1,22 @@
+arm_64bit=1
+kernel=kernel8.img
+enable_uart=1
+dtoverlay=disable-bt
+init_uart_clock=48000000
+kernel_address=0x80000
+
+# Holly video bring-up: 640x480 at 60 Hz on both micro-HDMI connectors.
+hdmi_force_hotplug:0=1
+hdmi_group:0=2
+hdmi_mode:0=4
+hdmi_drive:0=2
+hdmi_force_hotplug:1=1
+hdmi_group:1=2
+hdmi_mode:1=4
+hdmi_drive:1=2
+disable_overscan=1
+framebuffer_width=640
+framebuffer_height=480
+framebuffer_depth=32
+framebuffer_ignore_alpha=1
+max_framebuffers=2

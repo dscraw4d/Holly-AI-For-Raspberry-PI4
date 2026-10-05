@@ -1,0 +1,57 @@
+HOLLY AI LEARNING OS v0.49.27 - automatic lookup and direct answers
+
+INSTALL
+Shut Holly down and back up the current kernel8.img on the SD's boot partition.
+Replace ONLY kernel8.img with the kernel8.img in this ZIP. Keep config.txt,
+firmware, all partitions and data. Safely eject, boot, and use the existing
+Rimmer / smeghead login at the DHCP address shown by your router.
+In Chrome press Ctrl+F5, then New chat. Run version to confirm v0.49.27.
+Do not reflash the card or run doc format. Uploads, notes, memories, models and
+the 256-topic reference bank remain in place. HDMI-disabled kernel-recovery.img
+is optional recovery; copy it as kernel8.img only if needed.
+
+CHANGES
+Unhandled public requests now consult the Junior Encyclopedia of Space without
+needing a specific question opening. Bare topics such as 'Jupiter's moons' and
+new requests such as 'Give me information on a quasar' can start a lookup.
+Reference queries that find no usable passage now enter this same path instead
+of recommending an SSH reference upload. SSH, web and Telnet share this routing.
+
+Fresh and cached search replies speak the actual summary directly. Removed the
+'unverified', 'found a web reference', 'saved for future recall' and saved-bank
+preambles. Wikipedia replies omit 'Article overview'; that older prefix is also
+removed at recall without rewriting or deleting your existing saved topics.
+Source URLs, fetch dates and private cache metadata remain available through
+search source. Omitting the spoken label does not certify a search as accurate
+or make an article answer every specific question; the stored content remains
+an external reference, separate from personal memories and model training.
+
+Default search is ON in new sessions. search off remains an explicit session
+opt-out; search on restores automatic lookup. Cached references still work when
+lookup is off or offline. Known local answers and cache hits take priority.
+Personal requests and administrative commands stay local. Small talk continues
+through the normal conversational handlers instead of being sent to the reader.
+
+The generic 'I don't know ... add a reference through SSH' fallback is removed.
+If there is no usable online result, connection, clock or free outbound reader,
+Holly gives a brief explanation/retry message. She does not invent an answer to
+hide a failed request. The free services still return topic/article summaries,
+not full Google search results. Existing rate limits and one-reader busy state
+apply; this build does not bypass upstream limits or guarantee a match.
+
+TRY
+Jupiter's moons
+Give me information on a quasar
+What is Lister's favourite programming language?
+search status
+search source
+search cache
+search refresh black hole
+NEWS
+what is ten plus ten?
+
+VALIDATION
+Host routing, cache, reference, guest access, reading, conversation, assistant,
+news, Chrome UI, core persona and pinned OpenSSH login checks passed. Exact Pi
+normal/recovery binaries were verified, and the normal kernel completed an
+emulated Pi boot with 111 command cycles. Real Pi testing remains pending.

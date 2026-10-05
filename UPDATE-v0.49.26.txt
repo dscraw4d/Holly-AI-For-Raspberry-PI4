@@ -1,0 +1,86 @@
+HOLLY AI LEARNING OS v0.49.26
+Free encyclopedia fallback, 256 saved topics, local arithmetic, NEWS shortcut
+
+INSTALL ON YOUR EXISTING WORKING SD CARD
+1. Shut Holly down before removing the SD card. Back up its current kernel8.img.
+2. On the Windows-readable boot partition, replace ONLY kernel8.img with the
+   kernel8.img in this ZIP. Keep config.txt, all firmware files and partitions.
+3. Safely eject the card and boot the Pi. First boot can take longer while the
+   reference bank is created and old saved topics migrate.
+4. Connect with your existing DHCP address and login: Rimmer / smeghead.
+5. Run version and search cache. A healthy expanded document bank reports /256.
+6. In Chrome, press Ctrl+F5, then New chat to load the updated interface/session.
+
+This is a kernel update, not a whole-card image. Do not flash it with Imager.
+Do NOT run doc format, erase partitions or re-upload documents for this update.
+Your existing uploaded documents, personal memories, notes and history stay in
+place. kernel-recovery.img is the same release with HDMI disabled: use it only
+if recovery is needed, copying it onto the card as kernel8.img.
+
+TRY THESE IN SSH, TELNET OR THE WEB CHAT
+what is 10 plus 10?                   -> 20
+what is ten plus ten?                -> 20
+what is 10 minus 3?                   -> 7
+calculate (2 + 3) * 4                 -> 20
+what is 7 divided by 2?               -> 3.5
+calculate 1 / 0                      -> division-by-zero explanation
+NEWS                                 -> fetch current BBC world headlines
+news status                          -> read/check the current bulletin
+what is a black hole?                -> local/saved answer, then online lookup
+search cache                         -> count and active capacity
+search refresh black hole            -> replace that topic with a fresh lookup
+search source                        -> source URL and fetch time on request
+search forget black hole             -> delete that saved topic (SSH only)
+
+CALCULATOR
+Original local code handles plus/minus/times/multiplied by/divided by/over and
++ - * /, brackets, negatives and decimals. Spoken number words zero through
+twenty are understood. Order of operations is respected. Results use six-place
+fixed point; multiplication/division discard precision beyond six places.
+This is a basic bounded calculator, not symbolic algebra. Overflow, excessive
+precision, deep brackets and invalid expressions return clear errors.
+No internet or API account is needed for arithmetic.
+
+FREE ONLINE LOOKUP
+No account, card or API key is required by this integration. It tries the
+existing Instant Answer service; a valid empty summary then starts a Wikipedia
+article search/extract request. Article-leading a/an is removed from topic
+requests to improve common questions such as 'what is a black hole?'.
+Holly calls this 'searching the Junior Encyclopedia of Space'. Provider names
+and links are not spoken during ordinary lookup. search source and the bundled
+source documentation retain provenance. Local knowledge and saved references
+stay ahead of internet requests. Personal requests remain local.
+These services provide topic/article summaries, not Google's full web results.
+A search result is an unverified reference, not proof that an exact question
+has been answered. Missing/ambiguous/malformed results are not trained into the
+language model. Wikipedia disambiguation pages are rejected. The existing
+verified TLS, clock requirements, request limits and timeout remain in place.
+Open the web page to synchronize the clock before online requests.
+
+256-TOPIC STORAGE
+The new independent SD bank supports 256 full summaries (up to 1200 characters)
+with URLs (up to 512 characters) and fetch dates. Cached replies work offline.
+It uses one FREE slot in the existing expanded document bank. It does not
+repartition the card or overwrite uploaded files. Its approximately 1 MiB of
+records have two copies, CRCs, data-before-commit writes and readback checks.
+Old Vault-backed topics migrate automatically; old commits are retired only
+once their replacement is verified. Interrupted migration retains old answers.
+There is no silent eviction at 256 topics; forget one to make room.
+Internal storage is protected from document upload/delete/read commands and
+excluded from document reading and search.
+If the document bank is unavailable, full, or uses slots smaller than 2050
+sectors, the existing 64-topic Vault fallback remains available and search cache
+reports that explicitly. Do not format a working bank to fix that condition.
+New saved references occupy no personal-memory records. Old release kernels
+cannot read the new bank; back up the whole SD if you need a full rollback.
+
+NEWS
+NEWS, news and Holly news all fetch world news. This alias was already present
+in the prior release; it is explicitly tested here. news status and news source
+remain available. The web page polls and reads the completed bulletin.
+Headlines may be recent without all being published on today's calendar date.
+
+VALIDATION
+Host tests, fault injection, emulated Pi boot, binary checks and pinned SSH login
+passed. A live Wikipedia API JSON response was fetched and parsed. Real Pi
+Ethernet, SD timing and internet TLS still require your hardware test.

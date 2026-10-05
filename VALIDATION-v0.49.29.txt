@@ -1,0 +1,24 @@
+v0.49.29 validation
+
+Production browser-script harness: Queeg selects Microsoft David (en-US),
+rejects unspecified-gender Google US English and US female voices, uses en-US
+speech language and retains lower pitch. With no identified American male voice,
+no wrong-voice utterance is queued; captions and an explanatory notice appear.
+Switching to Holly restores Google UK English Male; Hilly restores Google UK
+English Female. Existing voice, microphone, chat, thinking meter and HDMI sync
+lifecycle tests remain passing.
+
+Pinned SSH login checked using real OpenSSH and the host byte adapter:
+Rimmer/smeghead, existing host key, version, math, discussion and password
+rejection. This adapter does not test Pi Ethernet.
+
+Normal and HDMI-disabled recovery kernels: AArch64 entry 0x80000; raw binary
+matches ELF; no unresolved symbols; original low-memory budget; real provisioned
+Pi LAN implementation and exact existing credentials embedded.
+
+Change scope is browser voice selection and version labels. Persona, portrait
+compression, speech-control protocol, kernel hardware paths, cache layout and
+TLS behavior retain the v0.49.28 implementation and validation. Previous release
+regression evidence is included; it is not claimed as newly repeated hardware
+or emulator testing for this version. Physical Pi/Chrome audio acceptance is
+pending, and the actual browser must have an English US male voice available.

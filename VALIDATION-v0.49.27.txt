@@ -1,0 +1,33 @@
+v0.49.27 validation
+
+Changed behavior tested through both owner/SSH and guest web/Telnet conversation
+paths: bare topics, novel question openings, reference misses and ask requests
+start a lookup; known local facts keep priority; personal queries and guest
+administration stay local; explicit search off remains respected.
+
+Fresh HTTP polling replies are exactly the fetched summary without a narration
+preamble. Cached replies omit unverified/saved-bank labels. A legacy persisted
+Wikipedia reference beginning 'Article overview: ' is recalled without that
+label. Sources, dates, reboot persistence, refresh and private cache metadata
+retain their previous functionality.
+
+Passed host targets: always-lookup, search, free-lookup, search-cache, reference,
+access, conversation, reading, assistant, news, web-ui and core Holly/persona.
+Cached fault-injection, bounds and old Vault compatibility checks also passed.
+The unchanged 256-topic disk layout and TLS engine retain v0.49.26 validation;
+this release does not claim new hardware SD/Ethernet/TLS testing.
+
+Pinned SSH login: real OpenSSH against host byte adapter, existing host key and
+Rimmer/smeghead identity; arithmetic, dialogue, source/reset and wrong-password
+rejection. The adapter is not physical Pi Ethernet.
+
+Normal and HDMI-disabled recovery kernels: AArch64 entry 0x80000; raw image and
+ELF match; no unresolved symbols; original low-memory budget; actual provisioned
+Pi network implementation, Ethernet buffers and LAN services; exact pinned
+release credential bytes checked in both packaged images.
+
+QEMU: normal kernel completed one Pi 4 emulated cold boot, 111 command cycles and
+three-second idle soak, including arithmetic, NEWS clock gating and modified
+reference-miss handling. Local small-talk/model prompts remain functional.
+
+Physical Pi acceptance remains pending. Logs and complete source are included.

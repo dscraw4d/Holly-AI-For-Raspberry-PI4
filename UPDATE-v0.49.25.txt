@@ -1,0 +1,92 @@
+HOLLY OS 0.49.25 - PERSISTENT JUNIOR ENCYCLOPEDIA REFERENCES
+JMC fan project - Darren "Viper" Crawford
+
+INSTALL WITHOUT ERASING YOUR CARD
+Finish uploads and shut down. Back up kernel8.img on your PC, then replace ONLY
+kernel8.img on the SD boot partition with this ZIP's kernel8.img. Keep all other
+boot files and partitions. Safely eject, boot, and press Ctrl+F5 / New chat in
+the browser. Check HollyOS V0.49.25 at the top right, or version over SSH.
+Do not reflash, doc format or doc init on a working document bank.
+Your documents, books, notes, alarms, lessons and memories are retained.
+SSH: ssh -o ConnectTimeout=60 -o RekeyLimit=4M Rimmer@YOUR_PI_IP
+Password: smeghead.
+This is a kernel update, not a full-card Pi Imager image. The optional
+kernel-recovery.img has the same pinned login identity with HDMI disabled.
+
+SAVE ONCE, RECALL LATER
+Successful online topic summaries are now automatically saved to Holly Vault,
+including the full bounded excerpt, original source URL and UTC fetch-request
+time. Next time the same normalized topic is requested, Holly replies directly
+from the saved reference. It works after reboot and without internet or a newly
+synchronised clock. Only a new fetch needs the clock/internet.
+Local lessons, curated Red Dwarf knowledge and selected uploaded books retain
+priority. Saved web references are shared across Holly's chat users. They are
+unverified reference material, not personal facts or automatically approved
+training data. Recording these references does not retrain a language model.
+
+TRY IT
+Open the web page to synchronise the clock for the first online lookup.
+Say: Who is Ada Lovelace?
+Holly says: I'm searching the Junior Encyclopedia of Space.
+When a usable summary arrives, Holly says it was saved for future recall.
+Reboot, then ask: Tell me about Ada Lovelace
+Holly should respond from the saved reference without a new web request.
+The browser progress label remains Searching the Junior Encyclopedia of Space...
+Holly's acknowledgements and search errors no longer name the search provider.
+
+Commands over SSH, Telnet or typed browser chat:
+search <topic>            Recall a saved topic, otherwise fetch it
+search status            Latest search/reference in this session
+search source            Original source URL and UTC date/time
+search cache             Persistent bank status and saved-topic count
+search refresh <topic>    Force a new fetch and replace only after successful save
+search off               Disable automatic online fallback for this session;
+                         saved references and explicit search still work
+search on                Re-enable automatic online lookup (default)
+search forget <topic>     SSH ONLY: remove that permanently saved reference
+
+Matching is by normalized topic, not arbitrary semantic paraphrases. Case and
+trailing sentence punctuation are ignored, as are prefixes such as who is,
+what is, tell me about, what do you know about and can you tell me about.
+Different spellings/subjects can still create separate topics. An explicit
+search uses the supplied topic. 'search refresh' can update old information;
+references are not silently refreshed or automatically expired.
+Forgetting a saved record does not erase an already displayed reply or SSH
+conversation history. Only a usable article summary is saved: empty, ambiguous,
+RelatedTopics-only, malformed and failed searches do not become knowledge.
+
+DURABLE STORAGE AND LIMITS
+The first implementation holds up to 64 persistent topics. It never silently
+evicts an old topic when full: use search forget <topic> over SSH to make room.
+Each stored topic uses up to seven zero-confidence internal chunk records plus
+one commit record in the existing Vault memory journal. It stores at most 1,200
+characters of summary, 512 characters of source URL and a 192-character topic.
+The existing finite Vault record pool is shared with personal memories/notes/
+alarms; it can fill before the 64-topic limit. A missing/full/failing Vault is
+reported as inability to save permanently; the fetched result is then RAM-only.
+No successful save is claimed until the committed data is read back and checked.
+
+Chunks are written first, then a checksummed manifest is committed. A refresh
+keeps the previous complete entry until the replacement is verified. Reboot
+reloads only complete matching records; a torn write, deleted chunk or modified
+payload is not recalled as a mixed or partial answer. Interrupted saves/deletes
+can leave unused internal zero-confidence records. These do not produce answers
+but may consume slots. Existing SD layouts and all other record formats remain
+unchanged. Internal records are visible in SSH memory inspection with ddg tags;
+normal personal-fact recall excludes them.
+
+BACKEND AND REMAINING LIMITS
+Junior Encyclopedia of Space is Holly's in-character label. The online service
+remains DuckDuckGo's Instant Answer API, providing topic summaries rather than
+full search results. Deep questions may return no summary or a broader subject.
+Queries that trigger fetching are sent to that service. Common personal-term
+and administrative-input guards remain; they are not an exhaustive privacy
+classifier. Explicit search topics and successful summaries are shared records.
+Source URLs are shown on request rather than spoken in ordinary conversation.
+One outbound reader remains shared with BBC news/Wikipedia, with 10-second
+search rate limits, 60-second timeout, 192-character queries and 32 KiB JSON.
+The existing finite document-bank limits remain. This adds persistent retrieval,
+not full web crawling or ChatGPT-like generative capability.
+
+Earlier v0.49.24 searches were RAM-only. They cannot be recovered after reboot;
+fetch a topic once on this version to save it going forward.

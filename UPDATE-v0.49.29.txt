@@ -1,0 +1,35 @@
+HOLLY AI LEARNING OS v0.49.29 - American male Queeg voice
+
+INSTALL
+Power off the Pi and back up kernel8.img on the SD boot partition. Replace ONLY
+kernel8.img with the one in this ZIP. Preserve config.txt, firmware, partitions
+and all data. Boot, then press Ctrl+F5 in Chrome and select New chat.
+Run version over SSH to confirm v0.49.29. Login remains Rimmer / smeghead.
+Do not reflash or format. HDMI-disabled kernel-recovery.img is optional recovery;
+rename it kernel8.img only if needed.
+
+QUEEG'S VOICE
+Mention QUEEG in web/voice chat. Queeg now selects an English US male voice,
+preferring Google US English Male if that exact voice is available, then known
+US male voices such as Microsoft David, Mark, Guy or Christopher. His slightly
+lower pitch and stern persona remain. The generic Google US English voice is
+not assumed to be male, and female or British voices are not substituted.
+If no identified US male voice is present, captions continue and a notice asks
+you to enable an English US male voice such as Microsoft David, then refresh.
+Voice availability comes from Chrome and the device's installed speech voices.
+This is speech synthesis, not the actor's original voice.
+
+HOLLY/HILLY
+Mention HOLLY to return to the British male voice, or HILLY/HILLARY/HILARY for
+Hilly's British female voice. Their selection behavior is unchanged. Queeg's
+face, stern factual replies, thinking status and HDMI speech-sync recovery
+from v0.49.28 are included. Stored documents, notes, memories and the 256-topic
+reference bank remain intact. Queeg switching is in web/voice chat; SSH and
+Telnet remain Holly chat.
+
+VALIDATION
+Production browser-script tests passed for American male selection, en-US
+speech language, gruff pitch, absence of a male voice, and switching back to
+Holly/Hilly. Existing microphone, mouth-sync and conversation UI tests passed.
+Both kernels and the pinned SSH identity are verified. Physical Pi/Chrome
+speech acceptance remains pending. See VALIDATION.txt for scope.

@@ -1,0 +1,18 @@
+Holly AI Learning OS: encrypted chat. Type help or exit.
+holly> Holly AI Learning OS 0.49.28 - Queeg persona and resilient HDMI speech sync
+holly> Holly: 20.
+holly> Holly: 20.
+holly> Holly: 3.5.
+holly> Holly: I can't divide by zero.
+holly> Holly: My take (interpretation): Rimmer makes rank look like a substitute for being comfortable with yourself. I find the gap between his ambitions and his situation rather telling. Which side of Arnold Rimmer interests you most?
+holly> Holly: About Arnold Rimmer, my reasoning is: The record calls him officious and says he returns as a hologram. My reading is that authority matters to someone whose place on the ship is uncertain.
+holly> Holly: Basis for my interpretation, not a source for an invented scene: https://reddwarf.co.uk/about/the-story
+holly> Holly: Chris Barrie plays Arnold Rimmer.
+holly> Holly: Dialogue chat is off.
+Dialogue-4: 1266121 parameters; 761 word tokens. CPU cores available: 1.
+Authored greetings and sourced facts take priority. The original model handles other conversation while chat is on. For direct neural greetings use personality off. Saved facts and taught replies still work. chat on pauses automatic fact capture; use remember to save facts. train updates Seed-1, not the conversation models.
+holly> Holly: I haven't answered a question yet.
+holly> Holly: See you later.
+
+Wrong password rejected; pinned v0.46 host key verified.
+Host byte adapter, not Pi Ethernet.

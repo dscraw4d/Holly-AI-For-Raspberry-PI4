@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HollyOS V0.49.29</title><link rel="icon" href="data:,">
+<style>
+:root{color-scheme:dark;font-family:Arial,sans-serif;background:#000;color:#eee}*{box-sizing:border-box}body{margin:0;overflow:hidden}main{height:100vh;height:100dvh;display:grid;grid-template-rows:minmax(0,1fr) auto;background:#000}#face-area{position:relative;min-height:0;overflow:hidden}#face{display:block;width:100%;height:100%}#version{position:absolute;top:14px;right:18px;font:14px Consolas,monospace;color:#aaa;pointer-events:none}#notice{position:absolute;top:44px;left:16px;right:16px;max-width:650px;font-size:13px;line-height:1.4;background:#171717;padding:10px;border-radius:6px}#notice[hidden]{display:none}form{display:flex;gap:8px;align-items:stretch;padding:10px 14px 14px;background:#000}input,button{font:inherit;color:inherit;border:1px solid #444;background:#101010;border-radius:6px}input{flex:1;min-width:0;padding:12px;font-size:16px}button{padding:12px 16px;cursor:pointer;white-space:nowrap}button:hover{background:#222}button:disabled{opacity:.5;cursor:wait}#mic.listening{border-color:#c27878;background:#442020}input:focus-visible,button:focus-visible{outline:2px solid #d4bd8d;outline-offset:2px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@media(max-width:600px){form{gap:5px;padding:8px;flex-wrap:wrap}#mic{order:0}input{order:1;flex-basis:calc(100% - 150px)}#send{order:2;margin-left:auto}#reset{order:3}button{padding:10px;font-size:13px}#version{top:10px;right:10px;font-size:12px}}
+#thinking[hidden]{display:none}#thinking{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);width:min(420px,90%);padding:12px 16px;border:1px solid #5e5541;border-radius:8px;background:rgba(8,10,12,.92);box-shadow:0 0 18px #000;color:#dbc99d;font:14px Consolas,monospace;pointer-events:none}#thinking-heading{display:flex;justify-content:space-between;gap:12px}#thinking-elapsed{white-space:nowrap;color:#aaa}#thinking-bar{height:5px;margin-top:10px;background:#252525;border-radius:3px;overflow:hidden}#thinking-bar::after{content:"";display:block;height:100%;width:35%;background:linear-gradient(90deg,#665536,#ddc38b,#665536);animation:thinking-sweep 1.6s ease-in-out infinite}@keyframes thinking-sweep{0%{transform:translateX(-110%)}100%{transform:translateX(390%)}}@media(prefers-reduced-motion:reduce){#thinking-bar::after{animation:none;transform:none;width:35%;background:#b49c6c}}
+</style></head><body><main aria-label="Holly ship computer"><section id="face-area" aria-label="Holly's face"><canvas id="face" role="img" aria-label="Holly's face, animated while speaking">Holly's face</canvas><span id="version">HollyOS V0.49.29</span><span id="connection" class="sr" role="status">Connecting...</span><div id="notice" role="status" hidden></div><div id="thinking" hidden><div id="thinking-heading"><span id="thinking-label" role="status" aria-live="polite">Holly is thinking...</span><span id="thinking-elapsed" aria-hidden="true">0s</span></div><div id="thinking-bar" role="progressbar" aria-label="Holly is working; completion time unknown"></div></div></section><form id="form"><button id="mic" type="button" disabled>Talk to Holly</button><label for="message" class="sr">Message Holly</label><input id="message" maxlength="319" placeholder="Talk to Holly..." autocomplete="off" required><button id="send" type="submit" disabled>Send</button><button id="reset" type="button" disabled>New chat</button></form></main>
+<script>
+'use strict';
+const log=document.createElement('div'),input=document.getElementById('message'),send=document.getElementById('send'),reset=document.getElementById('reset'),state=document.getElementById('connection'),canvas=document.getElementById('face'),context=canvas.getContext('2d');
+const atlas=new Image(),reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+let avatar='holly';
+let token='',busy=false,artReady=false,currentFrame=0,animation=0,lastDraw=0,captionTimer=0,captionActive=false,captionPending=[],currentCaption=null;
+function paint(frame){
+ currentFrame=frame;if(hdmiActive)hdmiFrame=frame;if(!artReady||!context)return;
+ const bounds=canvas.getBoundingClientRect(),ratio=Math.min(window.devicePixelRatio||1,2),width=Math.max(1,Math.round(bounds.width*ratio)),height=Math.max(1,Math.round(bounds.height*ratio));
+ if(canvas.width!==width||canvas.height!==height){canvas.width=width;canvas.height=height;}
+ const scale=Math.min(width/(avatar==='hilly'?256:220),height/288),dw=(avatar==='hilly'?256:220)*scale,dh=288*scale;
+ context.fillStyle='#000';context.fillRect(0,0,width,height);
+ context.drawImage(atlas,avatar==='hilly'?128:140,(frame+(avatar==='queeg'?14:avatar==='hilly'?7:0))*288,avatar==='hilly'?256:220,288,(width-dw)/2,(height-dh)/2,dw,dh);
+}
+function stopTalking(){if(animation)cancelAnimationFrame(animation);animation=0;paint(0);}
+function mouthEvents(text){
+ const events=[];let scanned=0;
+ for(let at=0;at<text.length&&events.length<128&&scanned++<1024;){
+  const c=text[at++].toLowerCase();let frame=1,duration=65;
+  if(c==='['){while(at<text.length&&text[at]!==']'&&scanned++<1024)at++;if(at<text.length)at++;continue;}
+  if(c==='a')frame=3;
+  else if('efv'.includes(c))frame=5;
+  else if('iy'.includes(c))frame=2;
+  else if('ouwq'.includes(c))frame=4;
+  else if('mbp'.includes(c))frame=0;
+  else if('tdnlsz'.includes(c))frame=6;
+  else if(' \n\r'.includes(c)){frame=0;duration=70;}
+  else if('.,!?;:'.includes(c)){frame=0;duration=150;}
+  else if(!/^[a-z]$/.test(c))continue;
+  events.push({frame,duration});
+ }
+ return events;
+}
+function talk(text){
+ stopTalking();if(reducedMotion.matches||!artReady)return;
+ const events=mouthEvents(text);if(!events.length)return;
+ let index=0,next=performance.now()+events[0].duration;lastDraw=-Infinity;
+ function step(now){
+  while(index<events.length&&now>=next){index++;if(index<events.length)next+=events[index].duration;}
+  if(index>=events.length){animation=0;paint(0);return;}
+  if(now-lastDraw>=100&&events[index].frame!==currentFrame){paint(events[index].frame);lastDraw=now;}
+  animation=requestAnimationFrame(step);
+ }
+ animation=requestAnimationFrame(step);
+}
+function add(who,text){
+ if(who==='CONNECTION')note(text);
+ const p=document.createElement('p'),label=document.createElement('span');p.className=who==='YOU'?'user':who==='CONNECTION'?'notice':'reply';label.className='label';label.textContent=who+': ';p.append(label,document.createTextNode(text));log.append(p);while(log.children.length>100)log.firstChild.remove();log.scrollTop=log.scrollHeight;
+}
+function captionChunks(text){
+ const chunks=[];let line='';
+ for(const word of text.trim().split(/\s+/)){
+  if(!word)continue;
+  if(line&&(line.length+word.length+1>72||line.split(' ').length>=10)){chunks.push(line);line='';}
+  line+=(line?' ':'')+word;
+  if(/[.!?]$/.test(word)&&line.length>=28){chunks.push(line);line='';}
+ }
+ if(line)chunks.push(line);return chunks;
+}
+function captionLine(text){
+ if(currentCaption)currentCaption.className='caption';
+ const p=document.createElement('p'),label=document.createElement('span'),caption=document.createElement('span');
+ p.className='reply';label.className='label';label.textContent='HOLLY';caption.className='caption active';caption.textContent=text;p.append(label,caption);log.append(p);while(log.children.length>100)log.firstChild.remove();log.scrollTop=log.scrollHeight;currentCaption=caption;
+}
+function finishCaptions(){
+ cancelVoice();
+ if(captionTimer)clearTimeout(captionTimer);captionTimer=0;captionActive=false;stopTalking();
+ for(const text of captionPending)captionLine(text);captionPending=[];
+}
+function captionReply(text){
+ finishCaptions();captionPending=captionChunks(text);captionActive=true;hdmiBegin();
+ function next(){
+  if(!captionPending.length){captionActive=false;captionTimer=0;stopTalking();hdmiEnd();scheduleListening();state.textContent=busy?'Thinking...':token?'Holly online':'Disconnected';return;}
+  const line=captionPending.shift();captionLine(line);talk(line);state.textContent='Holly replying...';
+  const duration=Math.max(1400,mouthEvents(line).reduce((sum,event)=>sum+event.duration,0)+200);
+  captionTimer=setTimeout(next,duration);
+ }
+ next();
+}
+const thinking=document.getElementById('thinking'),thinkingLabel=document.getElementById('thinking-label'),thinkingElapsed=document.getElementById('thinking-elapsed');
+let thinkingTimer=0,thinkingStarted=0,thinkingVisible=false,thinkingSuspended=false,busyReason='Thinking';
+function updateThinking(){
+ const active=!thinkingSuspended&&(busy||newsPending||searchPending);
+ if(!active){thinking.hidden=true;thinkingVisible=false;if(thinkingTimer)clearTimeout(thinkingTimer);thinkingTimer=0;return;}
+ if(!thinkingVisible){thinkingVisible=true;thinkingStarted=performance.now();}
+ thinking.hidden=false;const seconds=Math.max(0,Math.floor((performance.now()-thinkingStarted)/1000));
+ const name=avatar==='queeg'?'Queeg':avatar==='hilly'?'Hilly':'Holly';
+ const label=avatar==='queeg'&&(searchPending||newsPending)?'Queeg is thinking...':busy?(busyReason==='Connecting'?'Connecting to '+name+'...':seconds>=20?'Still waiting for '+name+'...':name+' is thinking...'):searchPending?'Searching the Junior Encyclopedia of Space...':'Researching world news...';
+ if(thinkingLabel.textContent!==label)thinkingLabel.textContent=label;
+ thinkingElapsed.textContent=seconds+'s';
+ if(!thinkingTimer)thinkingTimer=setTimeout(()=>{thinkingTimer=0;updateThinking();},250);
+}
+function lock(on,reason='Thinking'){if(on)thinkingVisible=false;busy=on;busyReason=reason;updateThinking();if(on)stopListening();else scheduleListening();updateMic();send.disabled=on;reset.disabled=on;state.textContent=on?'Thinking...':captionActive?'Holly replying...':token?'Holly online':'Disconnected';}
+function request(path,options={}){
+ const task=transportQueue.then(()=>rawRequest(path,options));transportQueue=task.catch(()=>{});return task;
+}
+async function rawRequest(path,options={}){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),path==='/speech'?10000:path==='/news'||path==='/search'||path==='/clock'||path==='/alerts'?15000:path==='/session'?30000:185000);
+ try{const r=await fetch(path,{...options,cache:'no-store',signal:controller.signal});const text=await r.text();return {ok:r.ok,status:r.status,text,avatar:r.headers&&r.headers.get?r.headers.get('X-Holly-Avatar'):null};}finally{clearTimeout(timer);}
+}
+async function connect(){
+ if(busy)return;thinkingSuspended=false;finishCaptions();newsPending=false;searchPending=false;lock(true,'Connecting');token='';
+ try{const r=await request('/session');if(!r.ok||!/^[a-f0-9]{32}$/.test(r.text.trim()))throw Error('Session unavailable');token=r.text.trim();selectAvatar(r.avatar||avatar);await syncAssistantClock();startAssistantMaintenance();log.replaceChildren();currentCaption=null;captionLine(avatar==='queeg'?"Queeg is in command. State your question clearly.":avatar==='hilly'?"Hilly here. What would you like to talk about?":"Alright. Holly here. What would you like to talk about?");}catch(e){add('CONNECTION','Could not connect. Enable HTTP over SSH, then select New chat.');}finally{lock(false);}
+}
+async function chat(q){
+ if(busy||!q.trim())return;
+ if(!token){add('CONNECTION','Select New chat to connect.');return;}
+ if(!/^[\x20-\x7e]{1,319}$/.test(q)){add('CONNECTION','Use up to 319 plain ASCII characters for this build.');return;}
+ finishCaptions();searchPending=false;newsPending=false;for(const match of q.matchAll(/\b(hilly|hillary|hilary|holly|queeg)\b/gi))selectAvatar(match[1].toLowerCase());lock(true);add('YOU',q);input.value='';
+ try{const r=await request('/chat',{method:'POST',headers:{'Content-Type':'text/plain','X-Holly-Session':token},body:q});if(!r.ok){if(r.status===410)token='';throw Error(r.text||'Request failed');}if(r.avatar)selectAvatar(r.avatar);const text=r.text.replace(/^(?:Holly|Queeg)(?: \[[^\]]*\]| \(experimental\))?:\s*/,'');if(/^Fetching current world headlines\./.test(text))newsPending=true;if(/^(?:I'm searching the Junior Encyclopedia of Space|Searching DuckDuckGo|I am thinking)\./.test(text))searchPending=true;voiceReply(text);}catch(e){add('CONNECTION',e.name==='AbortError'?'Holly did not reply in time. Select New chat to reconnect.':'Message failed: '+e.message);stopTalking();}finally{lock(false);input.focus();}
+}
+let newsPending=false,searchPending=false;
+let assistantTimer=0,lastClockSync=0,assistantStopped=false,assistantEpoch=0;
+async function syncAssistantClock(){
+ if(!token)return;
+ const body=Math.floor(Date.now()/1000)+' '+(-new Date().getTimezoneOffset());
+ const r=await request('/clock',{method:'POST',headers:{'Content-Type':'text/plain','X-Holly-Session':token},body});
+ if(!r.ok)throw Error('Clock synchronisation failed');lastClockSync=Date.now();
+}
+function startAssistantMaintenance(){
+ assistantStopped=false;assistantEpoch++;if(assistantTimer)clearTimeout(assistantTimer);
+ assistantTimer=setTimeout(()=>assistantMaintenance(assistantEpoch),1000);
+}
+async function assistantMaintenance(epoch=assistantEpoch){
+ assistantTimer=0;if(assistantStopped||epoch!==assistantEpoch)return;
+ try{
+  if(token&&!busy){
+   if(!speaking&&!captionActive&&Date.now()-lastClockSync>=60000)await syncAssistantClock();
+   if(searchPending){
+    const session=token,n=await request('/search',{method:'POST',headers:{'Content-Type':'text/plain','X-Holly-Session':session},body:'poll'});
+    if(epoch!==assistantEpoch||session!==token)return;
+    if(n.status===410){token='';searchPending=false;return;}
+    if(!n.ok)throw Error('Search polling failed');
+    if(n.text==='idle|'){searchPending=false;voiceReply('That search was lost. Please ask again.');return;}
+    if(/^(ready|error)\|/.test(n.text)){searchPending=false;voiceReply(n.text.replace(/^[^|]*\|/,''));return;}
+   }
+   if(newsPending){
+    const session=token,n=await request('/news',{method:'POST',headers:{'Content-Type':'text/plain','X-Holly-Session':session},body:'poll'});
+    if(epoch!==assistantEpoch||session!==token)return;
+    if(n.status===410){token='';newsPending=false;return;}
+    if(!n.ok)throw Error('News polling failed');
+    if(n.ok&&n.text==='idle|'){newsPending=false;voiceReply('That news request was lost. Please ask for world news again.');return;}
+    if(n.ok&&/^(ready|error)\|/.test(n.text)){newsPending=false;voiceReply(n.text.replace(/^[^|]*\|/,''));return;}
+   }
+   if(speaking||captionActive)return;
+   const current=token,r=await request('/alerts',{method:'POST',headers:{'Content-Type':'text/plain','X-Holly-Session':current},body:'poll'});
+   if(epoch!==assistantEpoch||current!==token)return;
+   if(r.status===410){token='';return;}
+   const match=r.ok&&/^(\d+)\|([\s\S]+)$/.exec(r.text);
+   if(match){voiceReply(match[2]);await request('/alerts',{method:'POST',headers:{'Content-Type':'text/plain','X-Holly-Session':current},body:'ack '+match[1]});}
+  }
+ }catch(e){if(searchPending){searchPending=false;add('CONNECTION','Search connection interrupted. Select New chat to reconnect.');}if(newsPending){newsPending=false;add('CONNECTION','News connection interrupted. Select New chat to reconnect.');}/* Retain unacknowledged alarms on the Pi for a later poll. */}
+ finally{updateThinking();if(!assistantStopped&&epoch===assistantEpoch)assistantTimer=setTimeout(()=>assistantMaintenance(epoch),1000);}
+}
+window.addEventListener('pagehide',()=>{finishCaptions();thinkingSuspended=true;if(thinkingTimer)clearTimeout(thinkingTimer);thinkingTimer=0;thinking.hidden=true;assistantStopped=true;assistantEpoch++;if(assistantTimer)clearTimeout(assistantTimer);assistantTimer=0;});
+let transportQueue=Promise.resolve(),hdmiActive=false,hdmiPending='',hdmiToken='',hdmiFrame=0,hdmiBusy=false,hdmiTimer=0,hdmiGeneration=0,hdmiNeedsBegin=false,hdmiFailures=0;
+// One stream spans every spoken caption. Repeated onstart events are harmless.
+function hdmiBegin(){if(!token||hdmiActive)return;hdmiGeneration++;hdmiActive=true;hdmiToken=token;hdmiNeedsBegin=true;hdmiPending='';hdmiFrame=currentFrame;hdmiFailures=0;if(hdmiTimer)clearTimeout(hdmiTimer);hdmiTimer=0;hdmiPump();}
+function hdmiEnd(){const wasActive=hdmiActive;hdmiActive=false;if(hdmiTimer)clearTimeout(hdmiTimer);hdmiTimer=0;if(wasActive&&hdmiToken){hdmiPending='end '+hdmiGeneration;hdmiPump();}}
+async function hdmiPump(){
+ if(hdmiBusy||(!hdmiActive&&!hdmiPending)||!hdmiToken)return;
+ hdmiBusy=true;const generation=hdmiGeneration,sessionToken=hdmiToken;
+ const body=hdmiPending||(hdmiNeedsBegin?'begin ':'frame ')+generation+' '+hdmiFrame;hdmiPending='';
+ try{
+  const r=await request('/speech',{method:'POST',headers:{'Content-Type':'text/plain','X-Holly-Session':sessionToken},body});
+  if(generation!==hdmiGeneration||sessionToken!==hdmiToken)return;
+  if(!r.ok){if(r.status===404||r.status===410){hdmiActive=false;hdmiPending='';note(r.status===404?'HDMI speech endpoint missing. Update the Pi kernel and refresh this page.':'HDMI session expired. Select New chat.');}else throw Error('HDMI HTTP '+r.status);}
+  else {hdmiNeedsBegin=false;if(hdmiFailures>=3&&/^HDMI/.test(voiceNote.textContent)){voiceNote.hidden=true;}hdmiFailures=0;}
+ }catch(e){
+  if(generation===hdmiGeneration&&sessionToken===hdmiToken&&hdmiActive){hdmiNeedsBegin=true;hdmiFailures++;if(hdmiFailures===3)note('HDMI connection delayed; retrying mouth synchronisation automatically.');}
+ }finally{
+  hdmiBusy=false;if(hdmiPending)hdmiPump();else if(hdmiActive)hdmiTimer=setTimeout(hdmiPump,hdmiFailures?500:200);
+ }
+}
+
+const mic=document.getElementById('mic'),voiceNote=document.getElementById('notice');
+const voiceOn={checked:true},handsFree={checked:true},autoSend={checked:true},offline={checked:false},voiceSelect={value:''};
+const synth=window.speechSynthesis,Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+let voices=[],recognition=null,listening=false,micPreparing=false,voiceEpoch=0,voiceTimer=0,speaking=false,micBase='',micFinal='',micEpoch=0,currentUtterance=null,listenTimer=0,handsFreePaused=false,voiceFallbackTimer=0;
+function note(text){voiceNote.textContent=text;voiceNote.hidden=/^(Listening|Sending|Stopped|No speech heard)/.test(text);}
+function selectAvatar(name){avatar=name==='queeg'?'queeg':name==='hilly'||name==='hillary'||name==='hilary'?'hilly':'holly';loadVoices();paint(0);canvas.setAttribute('aria-label',(avatar==='queeg'?'Queeg':avatar==='hilly'?'Hilly':'Holly')+' face, animated while speaking');}
+function loadVoices(){
+ if(!synth){voiceOn.disabled=true;note('Spoken replies are unavailable. Text chat still works.');return;}
+ voices=synth.getVoices();
+ const british=voices.find(v=>(avatar==='hilly'?/Google UK English Female/i:/Google UK English Male/i).test(v.name))||voices.find(v=>/^en[-_]GB$/i.test(v.lang)&&(avatar==='hilly'?/Hazel|Susan|Female/i:/George|Male/i).test(v.name))||(avatar!=='hilly'?(voices.find(v=>/^en[-_]GB$/i.test(v.lang)&&v.localService)||voices.find(v=>/^en[-_]GB$/i.test(v.lang))||voices.find(v=>/^en/i.test(v.lang))):voices.find(v=>/^en[-_]GB$/i.test(v.lang)&&/Hazel|Susan|Female|Sonia|Libby|Serena|Kate|Martha/i.test(v.name)));
+ // The generic Google US English voice does not identify its gender.
+ // Prefer an explicitly male US voice, then known US male voice names.
+ const americanMale=voices.find(v=>/^en[-_]US$/i.test(v.lang)&&/\bGoogle US English Male\b/i.test(v.name))||voices.find(v=>/^en[-_]US$/i.test(v.lang)&&!/female/i.test(v.name)&&/\b(David|Mark|Guy|Christopher|Eric|Brian|Andrew|Roger|Steffan|Matthew|Joey|Justin|Male)\b/i.test(v.name));
+ const chosen=avatar==='queeg'?americanMale:british;
+ voiceSelect.value=chosen?chosen.voiceURI:'';
+ voiceSelect.disabled=!voices.length;
+}
+function updateMic(){mic.disabled=busy||!token||!Recognition||micPreparing||!window.isSecureContext;mic.textContent=listening||micPreparing||speaking||listenTimer?'Stop listening':'Talk to Holly';mic.className=listening?'listening':'';}
+function stopListening(){if(listenTimer)clearTimeout(listenTimer);listenTimer=0;micEpoch++;if(recognition){recognition.abort();recognition=null;}listening=false;micPreparing=false;updateMic();}
+function cancelVoice(){hdmiEnd();if(voiceFallbackTimer)clearTimeout(voiceFallbackTimer);voiceFallbackTimer=0;voiceEpoch++;if(voiceTimer)clearTimeout(voiceTimer);voiceTimer=0;speaking=false;currentUtterance=null;if(synth)synth.cancel();}
+function voiceReply(text){
+ text=text.replace(/^(?:Holly|Queeg)(?: \[[^\]]*\]| \(experimental\))?:\s*/,'');
+ if(!voiceOn.checked||!synth||!voices.length){captionReply(text);return;}
+ if(avatar==='queeg'&&!voiceSelect.value){captionReply(text);note('No American male voice is available in this browser. Enable an English US male voice such as Microsoft David, then refresh.');return;}
+ if(avatar==='hilly'&&!voiceSelect.value){captionReply(text);note('Chrome has no UK female voice available. Add an English UK female voice or mention HOLLY to switch back.');return;}
+ finishCaptions();stopListening();const epoch=voiceEpoch;captionPending=captionChunks(text);captionActive=true;speaking=true;updateMic();
+ function next(){
+  if(epoch!==voiceEpoch)return;
+  if(!captionPending.length){speaking=false;captionActive=false;stopTalking();hdmiEnd();scheduleListening();state.textContent=busy?'Thinking...':'Holly online';return;}
+  const line=captionPending.shift();captionLine(line);state.textContent='Holly speaking...';
+  const utterance=new SpeechSynthesisUtterance(line),selected=voices.find(v=>v.voiceURI===voiceSelect.value);
+  if(selected){utterance.voice=selected;utterance.lang=selected.lang;}else utterance.lang=avatar==='queeg'?'en-US':'en-GB';utterance.rate=avatar==='queeg'?.98:.92;utterance.pitch=avatar==='queeg'?.8:1;
+  currentUtterance=utterance;let ended=false;
+  function done(){if(ended||epoch!==voiceEpoch)return;ended=true;currentUtterance=null;if(voiceFallbackTimer)clearTimeout(voiceFallbackTimer);voiceFallbackTimer=0;clearTimeout(voiceTimer);voiceTimer=0;stopTalking();next();}
+  utterance.onstart=()=>{
+   if(epoch!==voiceEpoch)return;hdmiBegin();talk(line);
+   function keepMoving(){if(epoch!==voiceEpoch||ended)return;if(!animation&&!reducedMotion.matches)talk(line);voiceFallbackTimer=setTimeout(keepMoving,250);}
+   voiceFallbackTimer=setTimeout(keepMoving,250);
+  };
+  utterance.onboundary=e=>{if(epoch!==voiceEpoch||e.name!=='word')return;const word=line.slice(e.charIndex).match(/^\S+/);if(word)talk(word[0]);};
+  utterance.onend=done;
+  utterance.onerror=()=>{if(epoch!==voiceEpoch)return;note('Voice playback failed. Try again or select New chat.');const remaining=captionPending.slice();cancelVoice();captionPending=[];stopTalking();captionReply(remaining.join(' '));};
+  voiceTimer=setTimeout(()=>{if(epoch!==voiceEpoch)return;note('Voice playback timed out. Try again or select New chat.');finishCaptions();state.textContent='Holly online';},Math.max(20000,line.length*500));
+  synth.speak(utterance);
+ }
+ next();
+}
+function scheduleListening(){
+ if(listenTimer)clearTimeout(listenTimer);listenTimer=0;
+ if(searchPending||newsPending)return;
+ if(!handsFree.checked||handsFreePaused||!token||busy||speaking||captionActive||listening||micPreparing||!window.isSecureContext||!Recognition||input.value.trim())return;
+ listenTimer=setTimeout(()=>{listenTimer=0;if(handsFree.checked&&!handsFreePaused&&!busy&&!speaking&&!captionActive)startListening();},750);updateMic();
+}
+function plainTranscript(text){return text.replace(/[\u2018\u2019]/g,"'").replace(/[\u201c\u201d]/g,'"').replace(/[\u2013\u2014]/g,'-').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^\x20-\x7e]/g,' ').replace(/\s+/g,' ').trim();}
+async function startListening(){
+ if(listening||micPreparing){stopListening();return;}if(busy||!token||!Recognition)return;
+ finishCaptions();const attempt=++micEpoch;micPreparing=true;updateMic();
+ try{
+  const r=new Recognition();r.lang='en-GB';r.continuous=false;r.interimResults=true;r.failed=false;r.tooLong=false;
+  if(offline.checked){
+   if(!('processLocally' in r)||typeof Recognition.available!=='function'||typeof Recognition.install!=='function')throw Error('This Chrome does not offer on-device recognition. Uncheck Offline recognition only to use online recognition.');
+   r.processLocally=true;note('Checking the British English recognition pack...');
+   let availability=await Recognition.available({langs:['en-GB'],processLocally:true});
+   if(availability==='downloadable'||availability==='downloading'){note('Installing the English recognition pack. This download needs internet access.');if(!await Recognition.install({langs:['en-GB'],processLocally:true}))throw Error('Language pack installation failed.');availability=await Recognition.available({langs:['en-GB'],processLocally:true});}
+   if(availability!=='available')throw Error('Offline British English recognition is unavailable on this Chrome.');
+  }
+  if(!micPreparing||attempt!==micEpoch)return;
+  recognition=r;micBase=input.value.trim();micFinal='';
+  r.onstart=()=>{if(recognition!==r)return;micPreparing=false;listening=true;updateMic();note(autoSend.checked?'Listening... Holly will receive your words when Chrome detects the end of your speech.':'Listening... review your words, then press Send.');};
+  r.onresult=e=>{if(recognition!==r)return;let interim='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal)micFinal+=' '+e.results[i][0].transcript;else interim+=' '+e.results[i][0].transcript;}const text=plainTranscript([micBase,micFinal,interim].join(' '));input.value=text.slice(0,319);r.tooLong=text.length>319;if(r.tooLong)note('Transcript trimmed to 319 characters. Review it before sending.');};
+  r.onerror=e=>{if(recognition!==r)return;r.failed=true;if(e.error!=='no-speech')handsFreePaused=true;const messages={'not-allowed':'Microphone permission denied. Allow microphone access for this Holly page in Chrome site settings.','audio-capture':'No working microphone found. Check your Windows input device.','network':'Speech recognition service could not be reached. Check your internet connection.','no-speech':'No speech heard. Click Talk to Holly to retry.','language-not-supported':'The selected recognition language is unavailable.'};note(messages[e.error]||('Recognition stopped: '+e.error));};
+  r.onend=()=>{
+   if(recognition!==r)return;recognition=null;listening=false;micPreparing=false;updateMic();
+   const finalText=plainTranscript([micBase,micFinal].join(' '));
+   if(micFinal.trim()&&!r.failed){input.value=finalText.slice(0,319);if(autoSend.checked&&!r.tooLong&&finalText.length<=319){note('Sending your spoken message to Holly...');return chat(input.value);}note(r.tooLong?'Transcript is too long. Review/edit it, then Send.':'Review your words, then Send.');}
+   input.focus();scheduleListening();
+  };
+  r.start();
+ }catch(e){if(attempt!==micEpoch)return;handsFreePaused=true;micPreparing=false;listening=false;updateMic();note(e.message);}
+}
+mic.addEventListener('click',()=>{
+ if(listening||micPreparing||speaking||captionActive||listenTimer){handsFree.checked=false;stopListening();finishCaptions();state.textContent=token?'Holly online':'Disconnected';note('Stopped. Click Talk to Holly to resume.');updateMic();}
+ else{handsFree.checked=true;handsFreePaused=false;startListening();}
+});
+window.addEventListener('pagehide',stopListening);
+if(synth){synth.addEventListener('voiceschanged',loadVoices);loadVoices();}
+if(!window.isSecureContext)note('Microphone needs a Chrome origin setting on HTTP: open chrome://flags/#unsafely-treat-insecure-origin-as-secure, add '+window.location.origin+', choose Enabled and Relaunch. This exception does not encrypt HTTP. Typed chat and spoken replies remain available.');
+else if(!Recognition)note('Speech recognition is unavailable. Open this address in desktop Google Chrome.');
+
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();chat(input.value);});reset.addEventListener('click',connect);window.addEventListener('resize',()=>paint(currentFrame));window.addEventListener('pagehide',finishCaptions);reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches)stopTalking();});
+atlas.onload=()=>{if(atlas.naturalWidth!==512||atlas.naturalHeight!==6048){state.textContent='Portrait unavailable';return;}artReady=true;paint(0);connect();};atlas.onerror=()=>{state.textContent='Portrait unavailable';add('CONNECTION','Portrait could not load. Reload this page to retry.');};atlas.src='/holly-face.jpg';
+</script></body></html>

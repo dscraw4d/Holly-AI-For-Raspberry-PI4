@@ -1,0 +1,6 @@
+cc -O2 -std=c11 -Wall -Wextra -Werror -Isrc src/search_disk.c src/arithmetic.c src/search_cache.c src/search.c src/web_format.c src/news.c src/aes.c src/modexp.c src/sha256.c src/ssh_ident.c src/ssh_kex.c src/ssh_server.c src/mind.c src/holly.c src/lore.c src/reference.c src/dialogue.c src/dialogue3.c src/dialogue4.c src/language_model.c src/model_store.c src/selftrain.c tests/free_lookup_test.c -o build/free_lookup_test
+./build/free_lookup_test
+Free lookup: article cleanup, two-provider pending-to-ready lifecycle, strict JSON, safe source, disambiguation and malformed response rejection passed.
+cc -O2 -std=c11 -Wall -Wextra -Werror -Isrc src/search_disk.c src/arithmetic.c src/search_cache.c src/search.c src/web_format.c src/news.c src/aes.c src/modexp.c src/sha256.c src/ssh_ident.c src/ssh_kex.c src/ssh_server.c src/mind.c src/holly.c src/lore.c src/reference.c src/dialogue.c src/dialogue3.c src/dialogue4.c src/language_model.c src/model_store.c src/selftrain.c src/vault.c src/documents.c tests/cache_migration_test.c -o build/cache_migration_test
+./build/cache_migration_test
+Migration: reserved free document slot, upload/user preservation, failed-copy retention, verified migration, legacy cleanup, internal guards and durable forget passed.

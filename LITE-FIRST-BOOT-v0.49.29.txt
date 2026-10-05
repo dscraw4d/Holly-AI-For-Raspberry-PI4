@@ -1,0 +1,63 @@
+HOLLY AI LEARNING OS v0.49.29 LITE - fresh Raspberry Pi 4 installation
+By Darren "Viper" Crawford / JMC
+
+WHAT THIS IS
+A complete 256 MiB raw SD-card image, including the boot partition, Raspberry
+Pi firmware, custom Holly kernel and an empty persistent data partition.
+Use a Raspberry Pi 4-compatible microSD card with at least 268,435,456 actual
+bytes. A 512 MB or larger card comfortably exceeds the image size. Common
+1/8/16/32/64/128/256 GB cards do not need separate images.
+The Pi expands the marked Holly data partition to the detected card capacity
+on first boot. Document capacity depends on the actual card size.
+
+FRESH INSTALL
+1. Extract Holly-AI-Learning-OS-v0.49.29-Lite-Pi4.img from this ZIP.
+2. In Raspberry Pi Imager select Use custom, then select that .img.
+3. Select the target SD card and write it. Writing replaces that card's data.
+   Holly uses its own OS; Imager's Linux username/Wi-Fi customisation does not
+   configure Holly. Use the login below and wired Ethernet.
+4. Connect the Pi 4 to your router with Ethernet, attach HDMI if wanted, and
+   boot. Find the Pi's DHCP address in the router's client list.
+5. SSH from Windows: ssh -o ConnectTimeout=60 -o RekeyLimit=4M Rimmer@PI_IP
+   Replace PI_IP with the router's address. Password: smeghead
+6. Check version and storage. On this NEW installation only, initialise the
+   document bank with: doc format
+   Then check: doc status
+   The document bank and dedicated persistent web-reference bank are now ready.
+   Do not repeat doc format on a card containing uploads you want to keep.
+7. Open http://PI_IP/ in Chrome. HTTP port 80 and Telnet port 23 start by default.
+   SSH port 22 is used for administration, training and uploads.
+
+INCLUDED
+Built-in Red Dwarf references and original dialogue models; fullscreen HDMI
+faces for Holly/Hilly/Queeg; browser speech and animation; Queeg's stern persona
+and American male voice selection; Hilly's British female voice and Holly's
+British male voice; retryable HDMI mouth synchronisation; arithmetic, notes,
+alarms, NEWS, free online lookup, persistent topic caching and text uploads.
+Mention QUEEG, HOLLY or HILLY to switch the web/voice persona. HILLARY/HILARY
+also select Hilly. Queeg's switching is in web/voice chat; SSH/Telnet use Holly.
+
+The Vault starts empty. This image does not contain Darren's uploaded scripts,
+novels, personal memories, chat history, saved online topics or trained changes.
+Those remain on his working SD card. New owners can upload their own text using
+holly_upload.py or import transcripts using holly_scripts.py.
+
+BROWSER/NETWORK REQUIREMENTS
+Spoken voices come from the browser/installed system, not audio from the Pi.
+Queeg needs an identified English US male voice such as Microsoft David. Holly
+and Hilly use UK voices when available. Microphone access requires a secure
+browser origin and permission; plain LAN HTTP is not secure in default Chrome.
+The current kernel's numeric Host and HTTP Origin checks require appropriate
+header handling if you place it behind an HTTPS/domain reverse proxy.
+Internet lookup/news need DHCP gateway/DNS and a correct clock, synchronised
+when the browser connects or using clock set over SSH.
+
+VALIDATION AND FILES
+The image's MBR, FAT32, all staged boot files and complete empty Vault were
+verified by readback. Production expansion logic was checked against simulated
+512 MB through 512 GB cards, including idempotence and undersized-card refusal.
+Existing v0.49.29 kernel and pinned SSH identity are verified. This is software
+validation; the new Lite image still needs a physical Pi first-boot test.
+SHA256SUMS.txt supplies the image checksum. VALIDATION.txt records the scope.
+Source changes for Lite packaging and upstream notices are included. Complete
+kernel source is in the v0.49.29 American Male Queeg Voice update release.

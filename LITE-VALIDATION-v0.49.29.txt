@@ -1,0 +1,24 @@
+Holly v0.49.29 Lite validation
+
+Kernel is the same provisioned normal v0.49.29 kernel from the verified update.
+Exact embedded Rimmer/smeghead identity and real Pi networking verified against
+kernel ELF/raw binary; no unresolved symbols; entry 0x80000; low-memory budget.
+The supplied firmware/config layout matches the existing full-image boot set.
+
+Image: 268,435,456 bytes. MBR signature and boot/data entries checked. Boot FAT32
+is checked with fsck.fat; hidden-sector BPB matches partition LBA. Every required
+boot file is extracted from the completed image and byte-compared with staging.
+The entire initial 32 MiB Vault data region is zero. No uploaded user data exists
+in this fresh image. Original compiled reference/model content is included.
+
+Using the image's actual MBR and production holly_vault_expand_image_partition:
+512 MB, 1 GB, 8 GB, 16 GB, 32 GB, 64 GB, 128 GB, 256 GB and 512 GB simulated card
+capacities expand data to exactly the end of each card. Repeating expansion is
+idempotent; other MBR fields and partitions are unchanged. A nominal 256 MB card
+smaller than the 256 MiB image is rejected without changing the MBR.
+Production SD CSD capacity/partition tests also pass.
+
+Existing v0.49.29 voice/browser and pinned OpenSSH tests passed in that release;
+they are unchanged by Lite packaging. Prior release logs are included. No new
+physical Pi, SD card, monitor, Chrome microphone or reverse-proxy acceptance is
+claimed. Documentation requires one-time doc format on the fresh installation.

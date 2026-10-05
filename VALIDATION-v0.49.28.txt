@@ -1,0 +1,37 @@
+v0.49.28 validation
+
+HTTP/guest tests: whole-word Queeg/Holly/Hilly switching, persona persistence,
+Rimmer factual reply, joke refusal, user introduction, math, search opt-out,
+Queeg thinking acknowledgement and pending/ready/error response lifecycle.
+Queeg lookup paths do not use Junior Encyclopedia wording. Existing guest
+administration restrictions and request framing checks remain intact.
+
+Speech protocol tests: delayed end/frame ignored after a new generation;
+retries retain stream and frame; closed generation cannot be resurrected;
+stale stops cannot affect a different browser owner. Legacy controls remain
+compatible. Browser tests cover transient update failure recovery, idempotent
+begin, repeated stop, interrupts, speech watchdog, microphone and hands-free
+lifecycle, avatar atlas offsets, UK male/female voice choice and progress meter.
+
+Portrait tests compare every row of every compiled RGB565 frame against the
+resized supplied original. Seven mouth slots per avatar; Queeg's sixth image
+is reused for slot seven. Renderer tests cover frame differences, dimensions,
+stride/capacity boundaries and RGB565/RGB888/channel-order agreement.
+
+Regression targets: access, web-ui, dashboard, conversation, reading, assistant,
+news, search, search-cache, always-lookup and free-lookup. Existing persistent
+cache tests include reboot, partial-write faults, offline recall and capacity.
+AddressSanitizer/UndefinedBehaviorSanitizer guest HTTP parser/persona/control
+checks passed without errors (leak detection disabled because this runtime uses
+ptrace; no heap-leak check claimed). Guest TCP integration and pinned Rimmer/smeghead OpenSSH login are checked.
+
+Normal and HDMI-disabled recovery binaries: AArch64 entry 0x80000; raw image
+matches ELF; no unresolved symbols; original 16 MiB low-memory reservation;
+real provisioned Pi network, Ethernet buffers, LAN services and exact existing
+credential bytes. Normal kernel __stack_top is 0x00ef9c60 (subject to final
+verification log), leaving over 1 MiB in the reservation.
+
+QEMU: one emulated Pi 4 cold boot, 111 command cycles and 3-second idle soak.
+QEMU and host adapters do not verify physical Pi Ethernet/SD/HDMI or Chrome
+speech timing. TLS and persistent disk layout are unchanged; no new live
+provider or physical hardware test is claimed. Real Pi acceptance is pending.

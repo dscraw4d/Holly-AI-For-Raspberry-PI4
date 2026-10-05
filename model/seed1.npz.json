@@ -1,0 +1,97 @@
+{
+  "model": "Holly Seed-1",
+  "parameters": 39986,
+  "seed": 42,
+  "context_characters": 64,
+  "initial_validation_loss": 4.573247226525382,
+  "best_validation_loss": 2.373690186305147,
+  "best_step": 500,
+  "steps": 4000,
+  "train_records": 40,
+  "validation_records": 8,
+  "train_sha256": "68a723ef5f060abed01eb81ed9cab30ac52d4f8ee8b51ac0b57ff9de2fb165c6",
+  "valid_sha256": "5ddc94b019799ad961cac5d9f7c8cbbfe13f3510a4fc2635baaa95d14db19e6d",
+  "history": [
+    {
+      "step": 250,
+      "train_batch_loss": 2.1101388422310468,
+      "validation_loss": 2.5476569543185494
+    },
+    {
+      "step": 500,
+      "train_batch_loss": 1.1015000224341343,
+      "validation_loss": 2.373690186305147
+    },
+    {
+      "step": 750,
+      "train_batch_loss": 0.620856613314581,
+      "validation_loss": 2.5860373486794384
+    },
+    {
+      "step": 1000,
+      "train_batch_loss": 0.3158573445970643,
+      "validation_loss": 2.8064118743963
+    },
+    {
+      "step": 1250,
+      "train_batch_loss": 0.201288831840211,
+      "validation_loss": 3.054547695254981
+    },
+    {
+      "step": 1500,
+      "train_batch_loss": 0.14499914266797512,
+      "validation_loss": 3.2582757273687073
+    },
+    {
+      "step": 1750,
+      "train_batch_loss": 0.17568009610268878,
+      "validation_loss": 3.4166786261113247
+    },
+    {
+      "step": 2000,
+      "train_batch_loss": 0.10012134263223846,
+      "validation_loss": 3.554749624829813
+    },
+    {
+      "step": 2250,
+      "train_batch_loss": 0.10742974320907721,
+      "validation_loss": 3.6989660436115988
+    },
+    {
+      "step": 2500,
+      "train_batch_loss": 0.07856669385413734,
+      "validation_loss": 3.801719884695209
+    },
+    {
+      "step": 2750,
+      "train_batch_loss": 0.02578924298851938,
+      "validation_loss": 3.8884819696695194
+    },
+    {
+      "step": 3000,
+      "train_batch_loss": 0.10375824072324816,
+      "validation_loss": 4.005594283921581
+    },
+    {
+      "step": 3250,
+      "train_batch_loss": 0.09073279999789378,
+      "validation_loss": 4.080089779586201
+    },
+    {
+      "step": 3500,
+      "train_batch_loss": 0.09160255003410403,
+      "validation_loss": 4.175791410626973
+    },
+    {
+      "step": 3750,
+      "train_batch_loss": 0.09667522034887242,
+      "validation_loss": 4.216960707968079
+    },
+    {
+      "step": 4000,
+      "train_batch_loss": 0.13809821533409497,
+      "validation_loss": 4.2845921438230565
+    }
+  ],
+  "scope": "Tiny authored demonstration corpus. Validation used for checkpoint selection, not an independent benchmark."
+}

@@ -1,0 +1,76 @@
+HOLLY AI LEARNING OS 0.49.7 - SCRIPT CONVERSATION UPDATE
+By Darren 'Viper' Crawford / JMC fan project
+
+INSTALL ON YOUR EXISTING CARD - DO NOT REFLASH
+1. Finish uploading, close SSH and power down the Pi. This OS does not
+   provide a general Linux shutdown shell. Avoid interrupting SD writes.
+2. Put the SD card into your Windows computer. Open its boot partition.
+3. Copy the existing kernel8.img to a backup file on your PC.
+4. Replace only kernel8.img with kernel8.img from this ZIP.
+   Leave config.txt, firmware and the rest of the card unchanged.
+5. Safely eject, put the card back in the Pi and boot.
+6. Find its current DHCP address, then connect:
+   ssh -o ConnectTimeout=180 -o RekeyLimit=4M Rimmer@192.168.50.172
+   Substitute the current IP if different. Password: smeghead
+7. At holly> run version, storage, doc status and script coverage.
+   Version must show 0.49.7. Your Vault/scripts are not reformatted.
+If this fails, restore your backed-up kernel8.img. Do not initialize,
+format or reflash the card to install this update.
+
+TRY NORMAL CONVERSATION
+  What do you know about season 2?
+  which episodes?
+  What do you know about series eight?
+  In The End why couldn't Holly release Lister after the radiation leak?
+  Why did Lister survive?
+  In Queeg what happened to Holly?
+  My name is Darren
+  hello
+Episode follow-ups remember the last named episode within that session.
+Scene answers are labelled script excerpts, not generated summaries.
+Series 1-8 overviews are authored, with interpretations identified.
+No neural weights were retrained in this release.
+
+CHECK COVERAGE
+  script coverage
+Shows indexed episode titles, missing titles and per-series counts.
+Split packs count once. An episode marker does not prove that every line
+of its transcript is present. The catalogue covers series 1-8 only.
+Your earlier website upload contained 51 scripts; the site has no linked
+Back in the Red, part 3 and supplies no later series.
+
+ADD EXTRA LOCAL SCRIPTS
+On Windows, unzip tools/ to a folder (holly_scripts.py needs holly_upload.py).
+Put one plain-text transcript per episode into a separate folder.
+Use episode titles as filenames: Back in the Red, part 3.txt
+From the tools folder:
+  py -3 holly_scripts.py 192.168.50.172 D:\Holly-Extras --normalize --collection Extras --user Rimmer --dry-run
+Then remove --dry-run to upload. Use the SAME collection label and files
+when resuming. Extras get separate RD Scripts Extras NN pack titles, so
+existing RD Scripts NN packs are not targeted. No automatic deletion.
+For custom ordering/titles, use the importer's --manifest JSON option.
+For extra titles outside the series 1-8 catalogue, use:
+  script list
+  script ask Exact Episode Title | distinctive scene words
+Natural title recognition in this release covers series 1-8.
+
+CAPACITY
+The current bank has 16 slots x 131072 bytes, approximately 2 MiB.
+Your 13-pack upload leaves at most three free slots (minus other docs).
+A 128 GB card does not automatically enlarge that software limit.
+Do not delete scripts to make room without keeping originals/backups.
+Larger storage and automatic indexing of later series need a separate,
+safely migrated release. This release does not claim all episodes loaded.
+Scripts are never bundled; upload the material you have locally.
+
+DISPLAY / RECOVERY
+Display behaviour remains the previous static dashboard implementation.
+HDMI remains physically unverified on your Pi; this is not an HDMI fix.
+The ZIP also contains an HDMI-disabled recovery kernel. If needed, copy
+kernel-recovery.img as kernel8.img, retaining your normal kernel backup.
+
+DEVELOPMENT
+Source, tests and importer are included. Build instructions are in source.
+Release credentials are embedded in kernels; private credential source is
+not included. To reproduce the exact identity, retain your existing local
+credential header. Never replace it with development/test credentials.

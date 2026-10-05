@@ -1,0 +1,3 @@
+cc -O2 -DHOLLY_GUEST_TEST -std=c11 -Wall -Wextra -Werror -shared -fPIC -Isrc src/search_disk.c src/arithmetic.c src/search_cache.c src/search.c src/web_format.c src/news.c src/aes.c src/modexp.c src/sha256.c src/ssh_ident.c src/ssh_kex.c src/ssh_server.c src/mind.c src/holly.c src/lore.c src/reference.c src/dialogue.c src/dialogue3.c src/dialogue4.c src/language_model.c src/model_store.c src/selftrain.c src/net.c src/reply.c src/tcp_stream.c src/telnet.c src/http_server.c tests/tcp_stream_adapter.c -o build/guest_tcp_adapter.so
+python3 tests/guest_tcp_test.py
+Ports 23/80: TCP handshake, checksums, fragmented requests, duplicate suppression, response drain, complete seven-frame portrait atlas and FIN passed

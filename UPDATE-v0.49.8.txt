@@ -1,0 +1,87 @@
+HOLLY AI LEARNING OS 0.49.8 - FACE-ONLY HDMI
+Darren 'Viper' Crawford / JMC fan project
+
+INSTALL WITHOUT REFLASHING OR REMOVING SCRIPTS
+Finish uploads, disconnect and power down the Pi after SD activity settles.
+Put its SD card into Windows and open the boot partition.
+Back up the existing kernel8.img to your PC, then replace ONLY kernel8.img
+with this release's kernel8.img. Keep config.txt and firmware unchanged.
+Safely eject, insert the card into the Pi and boot.
+Connect using its current DHCP address:
+  ssh -o ConnectTimeout=180 -o RekeyLimit=4M Rimmer@192.168.50.172
+Password: smeghead. The host identity remains the same.
+At holly> run version, storage and doc status. Version must show 0.49.8.
+No Vault or document format changes; your scripts/memories stay in place.
+This ZIP is a kernel-only update, NOT an SD-card disk image.
+
+HDMI
+The HDMI picture is now ONLY the supplied Norman Lovett portrait on black.
+No dashboard, JMC frame, chat transcript, status text or interface panels.
+The closed-mouth holly1.png is the resting face. Supplied images holly2.png
+through holly7.png provide mouth shapes. Head proportions are preserved;
+background is cropped to fill the output rather than stretching the face.
+The stable existing 640x480 RGB565 framebuffer mode is retained.
+Portraits are compiled at 512x288 RGB565 and scaled by the kernel.
+HDMI0 starts automatically. HDMI1 allocation remains opt-in for stability:
+  display 1
+Both allocated outputs show the same portrait/mouth state.
+  display 0
+selects HDMI0 again. Existing colour/bar diagnostic commands still work.
+No per-frame mailbox traffic. No continuous repainting while idle.
+
+SILENT MOUTH ANIMATION
+Completed Holly replies from SSH, Telnet, web and the serial test console
+feed one shared display animation queue. A new reply replaces the old one.
+The supplied mouth shapes are selected by simple text-letter groups.
+M/B/P close the mouth; O/U/W choose the rounded mouth; punctuation pauses.
+Animation is capped at ten redraws per second and 128 queued text events.
+Long replies animate only their bounded opening section, then return idle.
+This is a visual approximation, NOT exact phoneme timing, TTS, a cloned
+voice or audio-synchronised lip movement. There is no audio in this release.
+Independent sessions still retain independent conversational context;
+only the latest reply's mouth animation is shared by the HDMI displays.
+
+TEST FROM SSH
+  display face
+  display frame 1
+  display frame 4
+  display frame 7
+  display talk Alright Darren, Holly here. How can I help?
+  displaydiag
+  hello
+frame 1 is closed, frame 4 is wide open, frame 7 is the supplied seventh
+mouth picture. Any new Holly reply replaces the manual frame when animation
+is enabled. Talking stops at the end of the queue and returns to frame 1.
+  display animate off
+keeps the resting portrait still during replies.
+  display animate on
+restores automatic text mouth animation.
+  display off
+stops drawing without tearing down the framebuffer.
+  display on
+reenables display drawing. display face restores the resting portrait.
+Telnet and HTTP still need telnet on / http on over SSH after reboot.
+Web appearance is byte-identical to v0.49.7; HDMI artwork is separate.
+
+SERIES CHAT RETAINED
+This includes v0.49.7 season 1-8 overviews, episode lists, script coverage,
+script questions and supplemental importer. Examples:
+  Tell me about Season 2
+  which episodes?
+  script coverage
+  In The End why couldn't Holly release Lister after the radiation leak?
+Your actual knowledge coverage still depends on the scripts you uploaded.
+
+RECOVERY
+If this display change causes a problem, power down and restore your old
+kernel8.img, or copy kernel-recovery.img from this ZIP as kernel8.img.
+The recovery build disables HDMI allocation; SSH and storage remain active.
+Do not reflash, format, delete the Vault or run doc init to install updates.
+
+INCLUDED
+Normal and HDMI-disabled kernels; hashes; supplied original seven PNGs;
+exact-renderer preview PNG and a mouth-shape preview GIF; full source;
+tests, importer tools and validation evidence. The GIF is a mouth-shape
+preview sequence, not a demonstration of audio-synchronised speech.
+Private credential source is excluded. Keep your local provisioned header
+when reproducing the existing release identity from source.

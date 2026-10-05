@@ -1,0 +1,15 @@
+cc -std=c11 -Wall -Wextra -Werror -Isrc src/net.c src/client.c tests/client_test.c -o build/client_test
+./build/client_test
+Outbound ARP/DNS/TCP: routing, DNS ID/checksum, partial ACK, loss, duplicate, reset, window and timeout checks passed
+cc -std=c11 -Wall -Wextra -Werror -Isrc src/web_format.c tests/web_format_test.c -o build/web_format_test
+./build/web_format_test
+HTTP fragmentation/chunking, response limits, JSON source selection and rejection checks passed
+make -C vendor/bearssl -j4 > build/bearssl-host.log 2>&1
+python3 tests/https_test.py
+TLS: valid passed
+TLS: valid-xml passed
+TLS: valid-ddg passed
+TLS: wrong-name passed
+TLS: expired passed
+TLS: untrusted passed
+TLS: rng-failure passed

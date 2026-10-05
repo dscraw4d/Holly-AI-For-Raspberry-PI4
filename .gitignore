@@ -1,0 +1,15 @@
+build/
+dist/
+.venv/
+__pycache__/
+*.pyc
+*.o
+*.so
+*.elf
+*.npz
+ssh-credentials.bin
+ssh_credentials_generated.h
+ssh-host-key.pub
+ssh-host-fingerprint.txt
+bootfiles/kernel8.img
+vendor/bearssl/build/

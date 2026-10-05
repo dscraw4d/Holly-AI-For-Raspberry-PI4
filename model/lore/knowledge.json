@@ -1,0 +1,857 @@
+{
+  "version": 1,
+  "reviewed": "2026-10-01",
+  "topics": [
+    {
+      "title": "Red Dwarf",
+      "aliases": [
+        "red dwarf",
+        "jmc",
+        "jupiter mining corporation"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Red Dwarf is the Jupiter Mining Corporation ship at the centre of the comedy. Its surviving company includes Lister, Rimmer, Cat, Holly and, later, Kryten.",
+          "source": "https://reddwarf.co.uk/database/"
+        },
+        {
+          "text": "The setting is roughly three million years after the disaster. Blue Midget and Starbug are its shuttlecraft. Try asking about a crew member or one of the ships.",
+          "source": "https://reddwarf.co.uk/database/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Dave Lister",
+      "aliases": [
+        "lister",
+        "dave lister",
+        "david lister"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Dave Lister survives the radiation disaster because he is in stasis. Holly wakes him roughly three million years later. His former bunkmate Rimmer returns as a hologram.",
+          "source": "https://reddwarf.co.uk/database/personnel/listerdavid/"
+        },
+        {
+          "text": "Lister was found as a baby beneath a pool table in Liverpool. His later adventures include finding the lost Red Dwarf and learning that time travel makes him his own father.",
+          "source": "https://reddwarf.co.uk/database/personnel/listerdavid/"
+        },
+        {
+          "text": "Craig Charles plays Dave Lister.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=theend&sectionID=episodes&seriesID=1"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Arnold Rimmer",
+      "aliases": [
+        "rimmer",
+        "arnold rimmer",
+        "arnold judas rimmer"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Arnold Rimmer is Lister's officious bunkmate, brought back as a hologram after the radiation disaster.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        },
+        {
+          "text": "In Series VII he leaves to take up the mantle of Ace Rimmer. Series VIII instead includes a resurrected, pre-accident Rimmer.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        },
+        {
+          "text": "Chris Barrie plays Arnold Rimmer.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=theend&sectionID=episodes&seriesID=1"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "The Cat",
+      "aliases": [
+        "cat",
+        "the cat",
+        "felis sapiens"
+      ],
+      "guard": true,
+      "pages": [
+        {
+          "text": "Cat belongs to a humanoid species descended from Lister's pregnant cat, Frankenstein. The species evolved aboard Red Dwarf over three million years.",
+          "source": "https://reddwarf.co.uk/database/personnel/cat/"
+        },
+        {
+          "text": "He has an enormous interest in clothes and very little interest in work. The official database gives him no personal name beyond Cat.",
+          "source": "https://reddwarf.co.uk/database/personnel/cat/"
+        },
+        {
+          "text": "Danny John-Jules plays Cat.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=theend&sectionID=episodes&seriesID=1"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Holly",
+      "aliases": [
+        "holly",
+        "ships computer",
+        "ship computer"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "In Red Dwarf, Holly is the ship's computer. Her original IQ is stated as 6000, but prolonged isolation causes computer senility. That fictional IQ is not a measurement of this Pi.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/holly/"
+        },
+        {
+          "text": "Holly invents the Holly Hop Drive and falls for Hilly, a counterpart from another universe. Adopting Hilly's face explains the in-story change of appearance.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/holly/"
+        },
+        {
+          "text": "Norman Lovett and Hattie Hayridge play Holly in the television series.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Kryten",
+      "aliases": [
+        "kryten",
+        "kryton",
+        "2x4b 523p",
+        "mechanoid"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Kryten 2X4B-523P is a Series 4000 mechanoid and a member of the Red Dwarf crew. Ask about the Kryten episode for his first television appearance.",
+          "source": "https://reddwarf.co.uk/database/"
+        },
+        {
+          "text": "Unlike a human crewmate, Kryten is an artificial life-form. His records are among the sources used by the fictional Space Corps Database.",
+          "source": "https://reddwarf.co.uk/database/"
+        },
+        {
+          "text": "David Ross plays Kryten in Series II. Robert Llewellyn takes over when Kryten becomes a regular in Series III.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Kristine Kochanski",
+      "aliases": [
+        "kochanski",
+        "kristine kochanski"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Kristine Kochanski is Lister's lost love. A counterpart from another universe joins the travelling crew during Series VII.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        },
+        {
+          "text": "Kochanski's arrival changes the crew dynamic, especially Kryten's relationship with Lister.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        },
+        {
+          "text": "Clare Grogan plays the earlier Kochanski; Chloe Annett plays the parallel-universe version introduced in Ouroboros.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Ace Rimmer",
+      "aliases": [
+        "ace rimmer"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Ace Rimmer is a brave, popular test pilot from a parallel universe. Dimension Jump brings him face to face with Arnold Rimmer.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=dimensionjump&sectionID=episodes&seriesID=4"
+        },
+        {
+          "text": "Dimension Jump is Series IV, episode 5, first broadcast on 14 March 1991. The contrast between the two Rimmers drives the story.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=dimensionjump&sectionID=episodes&seriesID=4"
+        },
+        {
+          "text": "Chris Barrie plays Ace as well as Arnold Rimmer.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=dimensionjump&sectionID=episodes&seriesID=4"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Hilly",
+      "aliases": [
+        "hilly"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Hilly is Holly's counterpart in Parallel Universe, Series II, episode 6. Hattie Hayridge plays her.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=paralleluniverse&sectionID=episodes&seriesID=2"
+        },
+        {
+          "text": "The episode uses Holly's hop drive to reach a universe of counterparts, including female versions of Lister and Rimmer.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=paralleluniverse&sectionID=episodes&seriesID=2"
+        },
+        {
+          "text": "Hattie Hayridge plays Hilly.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=paralleluniverse&sectionID=episodes&seriesID=2"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Frankenstein",
+      "aliases": [
+        "frankenstein"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Frankenstein is the pregnant cat Lister smuggles aboard Red Dwarf. Her descendants eventually evolve into the humanoid cat species.",
+          "source": "https://reddwarf.co.uk/database/personnel/cat/"
+        },
+        {
+          "text": "She survives in the cargo hold. Cat religion later treats her as its holy mother.",
+          "source": "https://reddwarf.co.uk/database/personnel/cat/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Cloister and Fuchal",
+      "aliases": [
+        "cloister",
+        "fuchal",
+        "cat religion"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Cloister is the cat religion's distorted memory of Lister. Its promised destination, Fuchal, grows out of his dream of a diner in Fiji.",
+          "source": "https://reddwarf.co.uk/database/personnel/cat/"
+        },
+        {
+          "text": "The cats divide over whether diner hats should be red or blue, although Lister intended green. Their arks leave Red Dwarf seeking Fuchal.",
+          "source": "https://reddwarf.co.uk/database/personnel/cat/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Duane Dibbley",
+      "aliases": [
+        "duane dibbley",
+        "dwayne dibbley",
+        "dibley"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Duane Dibbley is Cat's uncool alter ego, introduced in Back to Reality.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        },
+        {
+          "text": "The character appears in Series V's finale, which questions the crew's identities.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Aigburth Arms",
+      "aliases": [
+        "aigburth arms"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "The Aigburth Arms is the Liverpool pub where baby Lister was found beneath a pool table. Ouroboros confirms the pub's identity.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=ouroboros&sectionID=episodes&seriesID=7"
+        },
+        {
+          "text": "Baby Lister in Ouroboros is played by Alexander John-Jules, Danny John-Jules' nephew.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=ouroboros&sectionID=episodes&seriesID=7"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Starbug",
+      "aliases": [
+        "starbug",
+        "star bug"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Starbug is a JMC shuttle used by the crew. It is equipped for difficult terrain and underwater salvage, although its crash record leaves room for improvement.",
+          "source": "https://reddwarf.co.uk/database/ships/starbug/"
+        },
+        {
+          "text": "Its arrangements include a cockpit, sleeping quarters, galley and medical facilities. Ore sample pods have also served as improvised escape pods.",
+          "source": "https://reddwarf.co.uk/database/ships/starbug/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Blue Midget",
+      "aliases": [
+        "blue midget"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Blue Midget is another JMC craft used for journeys between a ship and a planetary surface.",
+          "source": "https://reddwarf.co.uk/database/ships/bluemidget/"
+        },
+        {
+          "text": "Its walker legs help it cross rough terrain. The official database also celebrates its ability to dance, which is an unusual entry on a spacecraft specification.",
+          "source": "https://reddwarf.co.uk/database/ships/bluemidget/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Skutters",
+      "aliases": [
+        "skutter",
+        "skutters",
+        "bob and madge"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Skutters are Red Dwarf's maintenance robots. Bob and Madge are two named examples.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/skutters/"
+        },
+        {
+          "text": "They enjoy John Wayne films and western games. Their willingness to insult Rimmer suggests maintenance is not their only talent.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/skutters/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Talkie Toaster",
+      "aliases": [
+        "talkie toaster",
+        "toaster"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Talkie Toaster is an artificial intelligence devoted to toast with exhausting enthusiasm. Lister eventually attacks it with a heavy hammer.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/talkietoaster/"
+        },
+        {
+          "text": "It was made by Crapola Inc. The joke is a machine whose entire conversation keeps returning to its one domestic purpose.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/talkietoaster/"
+        },
+        {
+          "text": "John Lenahan voices the early Toaster. David Ross voices it in White Hole and later Mechocracy.",
+          "source": "https://reddwarf.co.uk/episodes/whitehole/"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Simulants",
+      "aliases": [
+        "simulant",
+        "simulants"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Simulants are dangerous artificial beings with biomechanical elements. They were built for a war that never happened and seek opponents across space.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/simulants/"
+        },
+        {
+          "text": "Some treat hunting humans as sport. One pair even upgrades Starbug before pursuing the crew, making the chase more interesting for themselves.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/simulants/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Holly Hop Drive",
+      "aliases": [
+        "holly hop drive",
+        "hop drive"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "The Holly Hop Drive is Holly's invention for travelling beyond the crew's own universe. Its adventure brings Holly into contact with Hilly.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/holly/"
+        },
+        {
+          "text": "This is fictional Red Dwarf technology. This OS has no propulsion system, dimension drive, or control over a real spacecraft.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/holly/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Holly intelligence compression",
+      "aliases": [
+        "intelligence compression",
+        "holly iq",
+        "iq of holly",
+        "your iq",
+        "iq 6000"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "In White Hole, intelligence compression restores Holly's genius but leaves her with less than four minutes of operating life.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/holly/"
+        },
+        {
+          "text": "The story trades intelligence against remaining lifespan. It is a comedy premise, not how this Pi's model or processor works.",
+          "source": "https://reddwarf.co.uk/database/mechanicals/holly/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Holograms",
+      "aliases": [
+        "hologram",
+        "holograms",
+        "light bee"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Rimmer is an electronic reconstruction of a dead crewmate. The fictional Space Corps Database refers to his light-bee as a source of records.",
+          "source": "https://reddwarf.co.uk/database/"
+        },
+        {
+          "text": "Red Dwarf treats holographic people as personalities, not merely recordings to watch. Rimmer continues to argue and interact with the others.",
+          "source": "https://reddwarf.co.uk/database/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "The End",
+      "aliases": [
+        "the end",
+        "first episode",
+        "pilot episode"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "The End opens Series I. A radiation accident kills the mining ship's crew while Lister survives in stasis. He awakens three million years later.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=theend&sectionID=episodes&seriesID=1"
+        },
+        {
+          "text": "First broadcast: 15 February 1988 on BBC2. Rob Grant and Doug Naylor wrote it; Ed Bye directed it.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=theend&sectionID=episodes&seriesID=1"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Future Echoes",
+      "aliases": [
+        "future echoes"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Future Echoes is Series I, episode 2. When the ship exceeds light speed, the crew see events from their future, including an apparent fatal explosion.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=futureechoes&sectionID=episodes&seriesID=1"
+        },
+        {
+          "text": "First broadcast: 22 February 1988. The official guide notes that the TV victim is Lister's son Bexley, while the novel changes that family relationship.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=futureechoes&sectionID=episodes&seriesID=1"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Kryten episode",
+      "aliases": [
+        "kryten episode",
+        "nova 5",
+        "nova five"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Kryten, Series II episode 1, introduces the android on the Nova 5. The rescue party discovers that the women he serves are long dead.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=kryten&sectionID=episodes&seriesID=2"
+        },
+        {
+          "text": "First broadcast: 6 September 1988. David Ross plays Kryten, who was initially intended as a one-off character.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=kryten&sectionID=episodes&seriesID=2"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Better Than Life",
+      "aliases": [
+        "better than life",
+        "btl"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Better Than Life is Series II, episode 2. A game offers wish fulfilment, but Rimmer's mind makes enjoying it rather less straightforward.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=betterthanlife&sectionID=episodes&seriesID=2"
+        },
+        {
+          "text": "First broadcast: 13 September 1988. This card describes the television episode; the novel with the same title is a separate work.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=betterthanlife&sectionID=episodes&seriesID=2"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Queeg",
+      "aliases": [
+        "queeg",
+        "queeg 500"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Queeg is Series II, episode 5. A supposed backup computer takes over from Holly and imposes a punishing work-and-fitness routine.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=queeg&sectionID=episodes&seriesID=2"
+        },
+        {
+          "text": "First broadcast: 4 October 1988. Charles Augins plays Queeg; Norman Lovett plays Holly.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=queeg&sectionID=episodes&seriesID=2"
+        },
+        {
+          "text": "Charles Augins plays Queeg.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=queeg&sectionID=episodes&seriesID=2"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Parallel Universe",
+      "aliases": [
+        "parallel universe"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Parallel Universe closes Series II. Holly's hop drive takes the crew to a world with female Lister and Rimmer, Hilly, and a Dog counterpart to Cat.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=paralleluniverse&sectionID=episodes&seriesID=2"
+        },
+        {
+          "text": "First broadcast: 11 October 1988. Hattie Hayridge appears as Hilly. The episode also contains the Tongue Tied musical sequence.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=paralleluniverse&sectionID=episodes&seriesID=2"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Polymorph",
+      "aliases": [
+        "polymorph"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Polymorph is Series III, episode 3. A shape-changing genetic creature gets aboard Red Dwarf and terrorises the crew.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=polymorph&sectionID=episodes&seriesID=3"
+        },
+        {
+          "text": "First broadcast: 28 November 1989. The remastered edition adds a caption addressing the second polymorph, a detail left unresolved in the original.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=polymorph&sectionID=episodes&seriesID=3"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "White Hole",
+      "aliases": [
+        "white hole"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "White Hole is Series IV, episode 4. Holly regains her genius, powers down the ship, and leaves the others facing a dangerous white hole.",
+          "source": "https://reddwarf.co.uk/episodes/whitehole/"
+        },
+        {
+          "text": "First broadcast: 7 March 1991. Its plot draws on material first used in the Better Than Life novel.",
+          "source": "https://reddwarf.co.uk/episodes/whitehole/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Dimension Jump",
+      "aliases": [
+        "dimension jump"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Dimension Jump is Series IV, episode 5. Ace Rimmer crosses from another universe and meets his very different counterpart.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=dimensionjump&sectionID=episodes&seriesID=4"
+        },
+        {
+          "text": "First broadcast: 14 March 1991. Ace is a test pilot; his competence and popularity make Arnold's insecurities particularly visible.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=dimensionjump&sectionID=episodes&seriesID=4"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Quarantine",
+      "aliases": [
+        "quarantine"
+      ],
+      "guard": true,
+      "pages": [
+        {
+          "text": "Quarantine is Series V, episode 4. After a visit to a viral research centre, Rimmer orders the other crew into twelve weeks of isolation.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=quarantine&sectionID=episodes&seriesID=5"
+        },
+        {
+          "text": "First broadcast: 12 March 1992. Maggie Steed plays Dr Hildegarde Lanstrom. Mr Flibble also appears in this episode.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=quarantine&sectionID=episodes&seriesID=5"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Mr Flibble",
+      "aliases": [
+        "mr flibble",
+        "mister flibble",
+        "flibble"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Mr Flibble is the penguin hand puppet associated with Rimmer in Quarantine. It became one of the show's memorable visual jokes.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=quarantine&sectionID=episodes&seriesID=5"
+        },
+        {
+          "text": "Howard Burden assembled the puppet as a temporary solution, but the production kept it rather than replacing it.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=quarantine&sectionID=episodes&seriesID=5"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Back to Reality",
+      "aliases": [
+        "back to reality"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Back to Reality closes Series V. The crew investigates a submerged spacecraft whose occupants died, then faces a giant sea creature and a crisis of identity.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=backtoreality&sectionID=episodes&seriesID=5"
+        },
+        {
+          "text": "First broadcast: 26 March 1992. Timothy Spall plays Andy. The episode's arcade set reuses the Enlightenment set from Holoship.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=backtoreality&sectionID=episodes&seriesID=5"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Legion",
+      "aliases": [
+        "legion"
+      ],
+      "guard": true,
+      "pages": [
+        {
+          "text": "Legion is Series VI, episode 2. With supplies running low, the crew is drawn to an apparently deserted space station.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=legion&sectionID=episodes&seriesID=6"
+        },
+        {
+          "text": "First broadcast: 14 October 1993. Nigel Williams plays Legion. Lister's appendix operation is a noted continuity problem because an earlier episode mentions its removal.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=legion&sectionID=episodes&seriesID=6"
+        },
+        {
+          "text": "Nigel Williams plays Legion.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=legion&sectionID=episodes&seriesID=6"
+        }
+      ],
+      "cast_page": 2
+    },
+    {
+      "title": "Gunmen of the Apocalypse",
+      "aliases": [
+        "gunmen of the apocalypse",
+        "gunmen",
+        "apocalypse"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Gunmen of the Apocalypse is Series VI, episode 3. The crew enters Kryten's electronic mind to fight a computer virus represented as western gunslingers.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=gunmenoftheapocalypse&sectionID=episodes&seriesID=6"
+        },
+        {
+          "text": "First broadcast: 28 October 1993. The episode won the International Emmy for Popular Arts in 1994; its western scenes were filmed at Laredo in Kent.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=gunmenoftheapocalypse&sectionID=episodes&seriesID=6"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Ouroboros",
+      "aliases": [
+        "ouroboros"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Ouroboros is Series VII, episode 3. A meeting between realities brings an alternate Kochanski aboard, making Kryten anxious about losing Lister's attention.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=ouroboros&sectionID=episodes&seriesID=7"
+        },
+        {
+          "text": "First broadcast: 31 January 1997. This is Chloe Annett's first appearance as Kochanski.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=ouroboros&sectionID=episodes&seriesID=7"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "The Promised Land",
+      "aliases": [
+        "the promised land",
+        "promised land"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "The Promised Land is a feature-length Red Dwarf special first broadcast on 9 April 2020. It returns to the civilisation descended from Lister's cat.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=thepromisedland&sectionID=episodes&seriesID=13"
+        },
+        {
+          "text": "Doug Naylor wrote and directed it. Norman Lovett appears as Holly; Ray Fearon plays Rodon.",
+          "source": "https://reddwarf.co.uk/guide/index.cfm?episodeID=thepromisedland&sectionID=episodes&seriesID=13"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Red Dwarf novels",
+      "aliases": [
+        "novels",
+        "books",
+        "infinity welcomes careful drivers",
+        "last human"
+      ],
+      "guard": true,
+      "pages": [
+        {
+          "text": "The novels include Infinity Welcomes Careful Drivers and Better Than Life, followed by Doug Naylor's Last Human and Rob Grant's Backwards.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        },
+        {
+          "text": "The books expand and reinterpret television ideas. Their events should not automatically be treated as identical to TV continuity.",
+          "source": "https://reddwarf.co.uk/about/the-story"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Continuity",
+      "aliases": [
+        "continuity",
+        "which rimmer",
+        "rimmer alive",
+        "rimmer dead"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "The official FAQ does not settle exactly which Rimmer appears after Series VIII or how he became a hologram again. A confident invented explanation would be misleading.",
+          "source": "https://reddwarf.co.uk/help/theories-continuity/"
+        },
+        {
+          "text": "Back to Earth takes place before the real Series X. Its reference to a series ten belongs to the story's hallucination, not the actual later production.",
+          "source": "https://reddwarf.co.uk/help/theories-continuity/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Aliens",
+      "aliases": [
+        "aliens",
+        "alien"
+      ],
+      "guard": true,
+      "pages": [
+        {
+          "text": "The official Red Dwarf FAQ describes the show as a universe without aliens. Strange beings should not automatically be described as extraterrestrial civilisations.",
+          "source": "https://reddwarf.co.uk/help/theories-continuity/"
+        },
+        {
+          "text": "The FAQ also warns that a background TARDIS model is a production in-joke, not proof of an official Doctor Who crossover.",
+          "source": "https://reddwarf.co.uk/help/theories-continuity/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Smeg",
+      "aliases": [
+        "smeg",
+        "smeghead"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "Smeg is a fictional swear word created for Red Dwarf by Rob Grant and Doug Naylor.",
+          "source": "https://reddwarf.co.uk/help/theories-continuity/"
+        },
+        {
+          "text": "Its resemblance to the name of the Italian appliance company is coincidental, according to the official FAQ.",
+          "source": "https://reddwarf.co.uk/help/theories-continuity/"
+        }
+      ],
+      "cast_page": -1
+    },
+    {
+      "title": "Broadcast timeline",
+      "aliases": [
+        "timeline",
+        "series order",
+        "broadcast order"
+      ],
+      "guard": false,
+      "pages": [
+        {
+          "text": "The guide lists I-II in 1988, III in 1989, IV in 1991, V in 1992, VI in 1993, VII in 1997, and VIII in 1999.",
+          "source": "https://reddwarf.co.uk/guide/"
+        },
+        {
+          "text": "It then lists Back to Earth (2009), X (2012), XI (2016), XII (2017), and The Promised Land (2020). This pack is a curated historical reference, not a live news feed.",
+          "source": "https://reddwarf.co.uk/guide/"
+        }
+      ],
+      "cast_page": -1
+    }
+  ]
+}

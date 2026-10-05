@@ -1,0 +1,72 @@
+HOLLY AI LEARNING OS v0.49.28 - Queeg and resilient HDMI speech sync
+
+INSTALL
+Power off the Pi. Back up kernel8.img on the SD boot partition, then replace
+ONLY kernel8.img with the file in this ZIP. Keep config.txt, firmware and data
+partitions. Safely eject and boot. In Chrome press Ctrl+F5 and select New chat.
+SSH login remains Rimmer / smeghead at the router's current DHCP address.
+Run version to confirm v0.49.28. Do not reflash or format the document bank.
+An HDMI-disabled kernel-recovery.img is included; rename it kernel8.img only
+if you need a network-only recovery boot.
+
+QUEEG
+Mention QUEEG as a whole word in web/voice chat to summon him. The last avatar
+name in your message wins. Queeg remains active until you mention HOLLY or
+HILLY (HILLARY/HILARY also work). Six supplied Queeg images are built into both
+the HDMI renderer and the browser atlas. The teeth frame is reused for the
+seventh mouth shape; no substitute portrait was generated.
+
+Queeg answers in a stern command style, refuses jokes, issues short orders and
+occasionally criticises Holly's slack standards. Holly's random reference
+banter and experimental dialogue generation are suppressed for Queeg. His
+lookup acknowledgement and progress meter say he is thinking; they do not
+mention the Junior Encyclopedia of Space. He uses the same local documents,
+calculator and free online reader, with the same stored factual references.
+His manner is an authored persona, not a separately trained language model.
+
+Chrome chooses the existing UK male voice for Queeg and lowers its pitch for a
+gruff presentation. This is browser speech synthesis, not the original actor's
+voice. Hilly retains the UK female voice; Holly retains the UK male voice.
+Queeg switching is in web/voice chat; owner SSH and Telnet remain Holly chat.
+
+HDMI SYNCHRONISATION
+Each browser reply has a numbered speech stream. A delayed stop or frame from
+an older reply cannot interrupt a newer reply. Repeated speech-start events
+across caption chunks do not restart the stream. Begin retries carry the
+current mouth frame, so reattachment avoids an unnecessary closed-mouth flash.
+A closed stream cannot restart from a delayed begin retry.
+
+Temporary connection failures retry automatically, rather than permanently
+turning HDMI control off. The warning appears only after three failed updates
+and clears when control recovers. HTTP speech timeout and Pi watchdog now allow
+10 seconds for temporary delays. Clock maintenance yields while speech plays.
+The watchdog still returns the face to rest if the controller disappears.
+
+Use one speaking browser at a time for the shared HDMI face. Mouth shapes are
+approximate, with browser speech boundaries when available and bounded text
+animation otherwise. This does not promise sample-accurate phoneme timing.
+The browser and HDMI use the same avatar and mouth-frame mapping.
+
+SPACE AND EXISTING FEATURES
+All HDMI portraits use lossless row-run compression of the existing RGB565
+pixels, decoded one scanline at a time. No enlarged kernel memory reservation
+or new full-frame RAM buffer is required. HTTP, Telnet, notes, alarms, NEWS,
+math, uploads and the 256-topic persistent reference bank remain available.
+
+TRY IN WEB CHAT
+QUEEG
+Tell me about Rimmer
+Tell me a joke
+My name is Darren
+Queeg explain a quasar
+What is ten plus ten?
+HILLY
+HOLLY
+
+VALIDATION
+Host tests cover avatar switching and persistence, stern replies, joke refusal,
+name introduction, lookup pending/success/failure wording, voice selection,
+numbered stale-stop protection, retry recovery and existing chat features.
+Compiled portrait pixels are compared with all supplied originals.
+Pinned OpenSSH login, both release binaries and an emulated Pi boot are checked.
+Physical Pi HDMI/audio/network acceptance remains pending. See VALIDATION.txt.

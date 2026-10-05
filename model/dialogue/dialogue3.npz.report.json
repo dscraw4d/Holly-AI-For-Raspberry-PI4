@@ -1,0 +1,1087 @@
+{
+  "parameters": 792193,
+  "vocabulary": 577,
+  "splits": {
+    "train": {
+      "examples": 608,
+      "exact_replies": 594,
+      "loss": 0.014169426566324323
+    },
+    "valid": {
+      "examples": 76,
+      "exact_replies": 68,
+      "loss": 0.027920746926373044
+    },
+    "test": {
+      "examples": 76,
+      "exact_replies": 67,
+      "loss": 0.03920824964275814
+    }
+  },
+  "samples": [
+    {
+      "split": "valid",
+      "user": "hey there computer",
+      "previous": "",
+      "expected": "Hello. I am Holly. What would you like to talk about?",
+      "generated": "Hello. i am holly. what would you like to talk about?"
+    },
+    {
+      "split": "valid",
+      "user": "how are things going",
+      "previous": "",
+      "expected": "I am running and ready to chat. How are you doing?",
+      "generated": "I am still a small experimental model. i can make mistakes and misunderstand you."
+    },
+    {
+      "split": "valid",
+      "user": "can you introduce yourself",
+      "previous": "",
+      "expected": "I am Holly, your experimental ship computer. You can teach me things.",
+      "generated": "I am holly, your experimental ship computer. you can teach me things."
+    },
+    {
+      "split": "valid",
+      "user": "thank you for your help",
+      "previous": "",
+      "expected": "You are welcome. What shall we try next?",
+      "generated": "You are welcome. what shall we try next?"
+    },
+    {
+      "split": "valid",
+      "user": "goodbye for now",
+      "previous": "",
+      "expected": "See you later. Before switching off, pause training and wait for saved.",
+      "generated": "See you later. before switching off, pause training and wait for saved."
+    },
+    {
+      "split": "valid",
+      "user": "how can you help me",
+      "previous": "",
+      "expected": "I can recall saved facts, learn replies, and try short experimental conversations.",
+      "generated": "I can recall saved facts, learn replies, and try short experimental conversations."
+    },
+    {
+      "split": "valid",
+      "user": "are you ever wrong",
+      "previous": "",
+      "expected": "I am still a small experimental model. I can make mistakes and misunderstand you.",
+      "generated": "I am still a small experimental model. i can make mistakes and misunderstand you."
+    },
+    {
+      "split": "valid",
+      "user": "can you have feelings",
+      "previous": "",
+      "expected": "I do not have human feelings. I can still listen and respond thoughtfully.",
+      "generated": "Voice chat is not implemented yet. for now we can talk through ssh text."
+    },
+    {
+      "split": "valid",
+      "user": "i am feeling happy",
+      "previous": "",
+      "expected": "That sounds good. What happened?",
+      "generated": "That sounds good. what happened?"
+    },
+    {
+      "split": "valid",
+      "user": "i am tired after work",
+      "previous": "",
+      "expected": "Sounds like a long day. Would you like to tell me about it?",
+      "generated": "Sounds like a long day. would you like to tell me about it?"
+    },
+    {
+      "split": "valid",
+      "user": "i am having a difficult day",
+      "previous": "",
+      "expected": "I am sorry it has been difficult. What would you like to talk about?",
+      "generated": "That sounds good. what happened?"
+    },
+    {
+      "split": "valid",
+      "user": "what should we try next",
+      "previous": "",
+      "expected": "We could chat, test a saved memory, or teach me a new reply. Which sounds good?",
+      "generated": "We could chat, test a saved memory, or teach me a new reply. which sounds good?"
+    },
+    {
+      "split": "valid",
+      "user": "can we have a chat",
+      "previous": "",
+      "expected": "Go ahead. What is on your mind?",
+      "generated": "Voice chat is not implemented yet. for now we can talk through ssh text."
+    },
+    {
+      "split": "valid",
+      "user": "tell me something funny",
+      "previous": "",
+      "expected": "My repair plan has two steps: understand the problem, then stop making it worse.",
+      "generated": "My repair plan has two steps: understand the problem, then stop making it worse."
+    },
+    {
+      "split": "valid",
+      "user": "how can i add a fact",
+      "previous": "",
+      "expected": "Use remember followed by a fact. Use memory list to review what I saved.",
+      "generated": "Use remember followed by a fact. use memory list to review what i saved."
+    },
+    {
+      "split": "valid",
+      "user": "how can i teach you an answer",
+      "previous": "",
+      "expected": "Use teach question => answer. Then ask that question to test the saved reply.",
+      "generated": "Use teach question => answer. then ask that question to test the saved reply."
+    },
+    {
+      "split": "valid",
+      "user": "do train commands train this dialogue model",
+      "previous": "",
+      "expected": "This dialogue model was trained on a desktop. The train commands adapt the separate Seed model.",
+      "generated": "This dialogue model was trained on a desktop. the train commands adapt the separate seed model."
+    },
+    {
+      "split": "valid",
+      "user": "how can you read wikipedia",
+      "previous": "",
+      "expected": "I can request a Wikipedia summary with wiki read after you set wiki time.",
+      "generated": "I can request a wikipedia summary with wiki read after you set wiki time."
+    },
+    {
+      "split": "valid",
+      "user": "are you browsing the internet",
+      "previous": "",
+      "expected": "I do not browse automatically. The Wikipedia reader handles one requested summary at a time.",
+      "generated": "I do not browse automatically. the wikipedia reader handles one requested summary at a time."
+    },
+    {
+      "split": "valid",
+      "user": "can we voice chat",
+      "previous": "",
+      "expected": "Voice chat is not implemented yet. For now we can talk through SSH text.",
+      "generated": "Voice chat is not implemented yet. for now we can talk through ssh text."
+    },
+    {
+      "split": "valid",
+      "user": "why is my monitor black",
+      "previous": "",
+      "expected": "The screen is still being investigated. Use displaydiag to check the framebuffer state.",
+      "generated": "The screen is still being investigated. use displaydiag to check the framebuffer state."
+    },
+    {
+      "split": "valid",
+      "user": "how can i check storage",
+      "previous": "",
+      "expected": "Use storage to check the Vault. Saved facts and model checkpoints use separate storage areas.",
+      "generated": "Use storage to check the vault. saved facts and model checkpoints use separate storage areas."
+    },
+    {
+      "split": "valid",
+      "user": "how can i safely turn you off",
+      "previous": "",
+      "expected": "Pause training and wait for train status to say saved before disconnecting power.",
+      "generated": "Pause training and wait for train status to say saved before disconnecting power."
+    },
+    {
+      "split": "valid",
+      "user": "how can i update you",
+      "previous": "",
+      "expected": "A matching kernel update replaces kernel8.img. Reflashing a full image resets saved data.",
+      "generated": "A matching kernel update replaces kernel8. img. reflashing a full image resets saved data."
+    },
+    {
+      "split": "valid",
+      "user": "i really enjoy red dwarf",
+      "previous": "",
+      "expected": "You mentioned Red Dwarf. What do you enjoy about it?",
+      "generated": "You mentioned red dwarf. what do you enjoy about it?"
+    },
+    {
+      "split": "valid",
+      "user": "i enjoy programming",
+      "previous": "",
+      "expected": "What are you working on with your computer?",
+      "generated": "What are you working on with your computer?"
+    },
+    {
+      "split": "valid",
+      "user": "i have an idea for a project",
+      "previous": "",
+      "expected": "Tell me what you want to build and what is happening so far.",
+      "generated": "Tell me what you want to build and what is happening so far."
+    },
+    {
+      "split": "valid",
+      "user": "can you clarify that",
+      "previous": "",
+      "expected": "Which part would you like me to explain? I may need more details.",
+      "generated": "Which part would you like me to explain? i may need more details."
+    },
+    {
+      "split": "valid",
+      "user": "tell me the latest news",
+      "previous": "",
+      "expected": "I do not know enough to answer that reliably. You can teach me or save a sourced fact.",
+      "generated": "I do not know enough to answer that reliably. you can teach me or save a sourced fact."
+    },
+    {
+      "split": "valid",
+      "user": "your answer is incorrect",
+      "previous": "",
+      "expected": "Thanks for pointing that out. For a recalled fact, use correct that followed by the corrected text.",
+      "generated": "Thanks for pointing that out. for a recalled fact, use correct that followed by the corrected text."
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i enjoy red dwarf You mentioned Red Dwarf. What do you enjoy about it?",
+      "expected": "What do you like about Red Dwarf?",
+      "generated": "What do you like about red dwarf?"
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i am building a computer What are you working on with your computer?",
+      "expected": "What part of the computer are you working on?",
+      "generated": "What part of the computer are you working on?"
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i have a project idea Tell me what you want to build and what is happening so far.",
+      "expected": "What would you like your project to do?",
+      "generated": "What would you like your project to do?"
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i had a long day Sounds like a long day. Would you like to tell me about it?",
+      "expected": "What made your day tiring?",
+      "generated": "What made your day tiring?"
+    },
+    {
+      "split": "valid",
+      "user": "what question would you ask",
+      "previous": "i have good news That sounds good. What happened?",
+      "expected": "What was the good news?",
+      "generated": "What was the good news?"
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Red Dwarf",
+      "previous": "",
+      "expected": "Red Dwarf is the Jupiter Mining Corporation ship at the centre of the comedy.",
+      "generated": "You mentioned red dwarf. what do you enjoy about it?"
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Dave Lister",
+      "previous": "",
+      "expected": "Dave Lister survives the radiation disaster because he is in stasis.",
+      "generated": "Dave lister survives the radiation disaster because he is in stasis."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Arnold Rimmer",
+      "previous": "",
+      "expected": "Arnold Rimmer is Lister's officious bunkmate, brought back as a hologram after the radiation disaster.",
+      "generated": "Arnold rimmer is lister ' s officious bunkmate, brought back as a hologram after the radiation disaster."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe The Cat",
+      "previous": "",
+      "expected": "Cat belongs to a humanoid species descended from Lister's pregnant cat, Frankenstein.",
+      "generated": "Cat belongs to a humanoid species descended from lister ' s pregnant cat, frankenstein."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Holly",
+      "previous": "",
+      "expected": "In Red Dwarf, Holly is the ship's computer.",
+      "generated": "In red dwarf, holly is the ship ' s computer."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Kryten",
+      "previous": "",
+      "expected": "Kryten 2X4B-523P is a Series 4000 mechanoid and a member of the Red Dwarf crew.",
+      "generated": "Kryten 2x4b - 523p is a series 4000 mechanoid and a member of the red dwarf crew."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Kristine Kochanski",
+      "previous": "",
+      "expected": "Kristine Kochanski is Lister's lost love.",
+      "generated": "Kristine kochanski is lister ' s lost love."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Ace Rimmer",
+      "previous": "",
+      "expected": "Ace Rimmer is a brave, popular test pilot from a parallel universe.",
+      "generated": "Ace rimmer is a brave, popular test pilot from a parallel universe."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Hilly",
+      "previous": "",
+      "expected": "Hilly is Holly's counterpart in Parallel Universe, Series II, episode 6.",
+      "generated": "Hilly is holly ' s counterpart in parallel universe, series ii, episode 6."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Frankenstein",
+      "previous": "",
+      "expected": "Frankenstein is the pregnant cat Lister smuggles aboard Red Dwarf.",
+      "generated": "Skutters are red dwarf ' s maintenance robots."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Cloister and Fuchal",
+      "previous": "",
+      "expected": "Cloister is the cat religion's distorted memory of Lister.",
+      "generated": "Cloister is the cat religion ' s distorted memory of lister."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Duane Dibbley",
+      "previous": "",
+      "expected": "Duane Dibbley is Cat's uncool alter ego, introduced in Back to Reality.",
+      "generated": "Duane dibbley is cat ' s uncool alter ego, introduced in back to reality."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Aigburth Arms",
+      "previous": "",
+      "expected": "The Aigburth Arms is the Liverpool pub where baby Lister was found beneath a pool table.",
+      "generated": "The aigburth arms is the liverpool pub where baby lister was found beneath a pool table."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Starbug",
+      "previous": "",
+      "expected": "Starbug is a JMC shuttle used by the crew.",
+      "generated": "Starbug is a jmc shuttle used by the crew."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Blue Midget",
+      "previous": "",
+      "expected": "Blue Midget is another JMC craft used for journeys between a ship and a planetary surface.",
+      "generated": "Blue midget is another jmc craft used for journeys between a ship and a planetary surface."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Skutters",
+      "previous": "",
+      "expected": "Skutters are Red Dwarf's maintenance robots.",
+      "generated": "Skutters are red dwarf ' s maintenance robots."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Talkie Toaster",
+      "previous": "",
+      "expected": "Talkie Toaster is an artificial intelligence devoted to toast with exhausting enthusiasm.",
+      "generated": "Talkie toaster is an artificial intelligence devoted to toast with exhausting enthusiasm."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Simulants",
+      "previous": "",
+      "expected": "Simulants are dangerous artificial beings with biomechanical elements.",
+      "generated": "Simulants are dangerous artificial beings with biomechanical elements."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Holly Hop Drive",
+      "previous": "",
+      "expected": "The Holly Hop Drive is Holly's invention for travelling beyond the crew's own universe.",
+      "generated": "The holly hop drive is holly ' s invention for travelling beyond the crew ' s own universe."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Holly intelligence compression",
+      "previous": "",
+      "expected": "In White Hole, intelligence compression restores Holly's genius but leaves her with less than four minutes of operating life.",
+      "generated": "In white hole, intelligence compression restores holly ' s genius but leaves her with less than four minutes of operating life."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Holograms",
+      "previous": "",
+      "expected": "Rimmer is an electronic reconstruction of a dead crewmate.",
+      "generated": "Rimmer is an electronic reconstruction of a dead crewmate."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe The End",
+      "previous": "",
+      "expected": "The End opens Series I.",
+      "generated": "The end opens series i."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Future Echoes",
+      "previous": "",
+      "expected": "Future Echoes is Series I, episode 2.",
+      "generated": "Future echoes is series i, episode 2."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Kryten episode",
+      "previous": "",
+      "expected": "Kryten, Series II episode 1, introduces the android on the Nova 5.",
+      "generated": "Kryten, series ii episode 1, introduces the android on the nova 5."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Better Than Life",
+      "previous": "",
+      "expected": "Better Than Life is Series II, episode 2.",
+      "generated": "Better than life is series ii, episode 2."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Queeg",
+      "previous": "",
+      "expected": "Queeg is Series II, episode 5.",
+      "generated": "Queeg is series ii, episode 5."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Parallel Universe",
+      "previous": "",
+      "expected": "Parallel Universe closes Series II.",
+      "generated": "Parallel universe closes series ii."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Polymorph",
+      "previous": "",
+      "expected": "Polymorph is Series III, episode 3.",
+      "generated": "I am still a small experimental model. i can make mistakes and misunderstand you."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe White Hole",
+      "previous": "",
+      "expected": "White Hole is Series IV, episode 4.",
+      "generated": "White hole is series iv, episode 4."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Dimension Jump",
+      "previous": "",
+      "expected": "Dimension Jump is Series IV, episode 5.",
+      "generated": "Dimension jump is series iv, episode 5."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Quarantine",
+      "previous": "",
+      "expected": "Quarantine is Series V, episode 4.",
+      "generated": "Quarantine is series v, episode 4."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Mr Flibble",
+      "previous": "",
+      "expected": "Mr Flibble is the penguin hand puppet associated with Rimmer in Quarantine.",
+      "generated": "Mr flibble is the penguin hand puppet associated with rimmer in quarantine."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Back to Reality",
+      "previous": "",
+      "expected": "Back to Reality closes Series V.",
+      "generated": "Back to reality closes series v."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Legion",
+      "previous": "",
+      "expected": "Legion is Series VI, episode 2.",
+      "generated": "Legion is series vi, episode 2."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Gunmen of the Apocalypse",
+      "previous": "",
+      "expected": "Gunmen of the Apocalypse is Series VI, episode 3.",
+      "generated": "Gunmen of the apocalypse is series vi, episode 3."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Ouroboros",
+      "previous": "",
+      "expected": "Ouroboros is Series VII, episode 3.",
+      "generated": "Ouroboros is series vii, episode 3."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe The Promised Land",
+      "previous": "",
+      "expected": "The Promised Land is a feature-length Red Dwarf special first broadcast on 9 April 2020.",
+      "generated": "The promised land is a feature - length red dwarf special first broadcast on 9 april 2020."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Red Dwarf novels",
+      "previous": "",
+      "expected": "The novels include Infinity Welcomes Careful Drivers and Better Than Life, followed by Doug Naylor's Last Human and Rob Grant's Backwards.",
+      "generated": "The novels include infinity welcomes careful drivers and better than life, followed by doug naylor ' s last human and rob grant ' s backwards."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Continuity",
+      "previous": "",
+      "expected": "The official FAQ does not settle exactly which Rimmer appears after Series VIII or how he became a hologram again.",
+      "generated": "I do not browse automatically. the wikipedia reader handles one requested summary at a time."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Aliens",
+      "previous": "",
+      "expected": "The official Red Dwarf FAQ describes the show as a universe without aliens.",
+      "generated": "The official red dwarf faq describes the show as a universe without aliens."
+    },
+    {
+      "split": "valid",
+      "user": "could you describe Smeg",
+      "previous": "",
+      "expected": "Smeg is a fictional swear word created for Red Dwarf by Rob Grant and Doug Naylor.",
+      "generated": "Smeg is a fictional swear word created for red dwarf by rob grant and doug naylor."
+    },
+    {
+      "split": "test",
+      "user": "good morning holly",
+      "previous": "",
+      "expected": "Hello. I am Holly. What would you like to talk about?",
+      "generated": "Hello. i am holly. what would you like to talk about?"
+    },
+    {
+      "split": "test",
+      "user": "are you doing all right",
+      "previous": "",
+      "expected": "I am running and ready to chat. How are you doing?",
+      "generated": "I am still a small experimental model. i can make mistakes and misunderstand you."
+    },
+    {
+      "split": "test",
+      "user": "what is your name holly",
+      "previous": "",
+      "expected": "I am Holly, your experimental ship computer. You can teach me things.",
+      "generated": "In red dwarf, holly is the ship ' s computer."
+    },
+    {
+      "split": "test",
+      "user": "thanks that was helpful",
+      "previous": "",
+      "expected": "You are welcome. What shall we try next?",
+      "generated": "You are welcome. what shall we try next?"
+    },
+    {
+      "split": "test",
+      "user": "see you later holly",
+      "previous": "",
+      "expected": "See you later. Before switching off, pause training and wait for saved.",
+      "generated": "See you later. before switching off, pause training and wait for saved."
+    },
+    {
+      "split": "test",
+      "user": "what can you do for me",
+      "previous": "",
+      "expected": "I can recall saved facts, learn replies, and try short experimental conversations.",
+      "generated": "I can recall saved facts, learn replies, and try short experimental conversations."
+    },
+    {
+      "split": "test",
+      "user": "can you misunderstand me",
+      "previous": "",
+      "expected": "I am still a small experimental model. I can make mistakes and misunderstand you.",
+      "generated": "I can recall saved facts, learn replies, and try short experimental conversations."
+    },
+    {
+      "split": "test",
+      "user": "do you have human emotions",
+      "previous": "",
+      "expected": "I do not have human feelings. I can still listen and respond thoughtfully.",
+      "generated": "I do not have human feelings. i can still listen and respond thoughtfully."
+    },
+    {
+      "split": "test",
+      "user": "my day is going well",
+      "previous": "",
+      "expected": "That sounds good. What happened?",
+      "generated": "That sounds good. what happened?"
+    },
+    {
+      "split": "test",
+      "user": "today has been tiring",
+      "previous": "",
+      "expected": "Sounds like a long day. Would you like to tell me about it?",
+      "generated": "Sounds like a long day. would you like to tell me about it?"
+    },
+    {
+      "split": "test",
+      "user": "my day was difficult",
+      "previous": "",
+      "expected": "I am sorry it has been difficult. What would you like to talk about?",
+      "generated": "You are welcome. what shall we try next?"
+    },
+    {
+      "split": "test",
+      "user": "i am bored today",
+      "previous": "",
+      "expected": "We could chat, test a saved memory, or teach me a new reply. Which sounds good?",
+      "generated": "That sounds good. what happened?"
+    },
+    {
+      "split": "test",
+      "user": "i want to tell you something",
+      "previous": "",
+      "expected": "Go ahead. What is on your mind?",
+      "generated": "Go ahead. what is on your mind?"
+    },
+    {
+      "split": "test",
+      "user": "can you make me laugh",
+      "previous": "",
+      "expected": "My repair plan has two steps: understand the problem, then stop making it worse.",
+      "generated": "My repair plan has two steps: understand the problem, then stop making it worse."
+    },
+    {
+      "split": "test",
+      "user": "how do i save a memory",
+      "previous": "",
+      "expected": "Use remember followed by a fact. Use memory list to review what I saved.",
+      "generated": "Use remember followed by a fact. use memory list to review what i saved."
+    },
+    {
+      "split": "test",
+      "user": "how do i save a reply",
+      "previous": "",
+      "expected": "Use teach question => answer. Then ask that question to test the saved reply.",
+      "generated": "Use teach question => answer. then ask that question to test the saved reply."
+    },
+    {
+      "split": "test",
+      "user": "how does this dialogue model learn",
+      "previous": "",
+      "expected": "This dialogue model was trained on a desktop. The train commands adapt the separate Seed model.",
+      "generated": "This dialogue model was trained on a desktop. the train commands adapt the separate seed model."
+    },
+    {
+      "split": "test",
+      "user": "can you fetch an article",
+      "previous": "",
+      "expected": "I can request a Wikipedia summary with wiki read after you set wiki time.",
+      "generated": "I can request a wikipedia summary with wiki read after you set wiki time."
+    },
+    {
+      "split": "test",
+      "user": "do you crawl the web automatically",
+      "previous": "",
+      "expected": "I do not browse automatically. The Wikipedia reader handles one requested summary at a time.",
+      "generated": "I do not browse automatically. the wikipedia reader handles one requested summary at a time."
+    },
+    {
+      "split": "test",
+      "user": "can you hear my voice",
+      "previous": "",
+      "expected": "Voice chat is not implemented yet. For now we can talk through SSH text.",
+      "generated": "Voice chat is not implemented yet. for now we can talk through ssh text."
+    },
+    {
+      "split": "test",
+      "user": "the hdmi screen is blank",
+      "previous": "",
+      "expected": "The screen is still being investigated. Use displaydiag to check the framebuffer state.",
+      "generated": "The screen is still being investigated. use displaydiag to check the framebuffer state."
+    },
+    {
+      "split": "test",
+      "user": "where do you save memories",
+      "previous": "",
+      "expected": "Use storage to check the Vault. Saved facts and model checkpoints use separate storage areas.",
+      "generated": "Use storage to check the vault. saved facts and model checkpoints use separate storage areas."
+    },
+    {
+      "split": "test",
+      "user": "what do i do before unplugging",
+      "previous": "",
+      "expected": "Pause training and wait for train status to say saved before disconnecting power.",
+      "generated": "We could chat, test a saved memory, or teach me a new reply. which sounds good?"
+    },
+    {
+      "split": "test",
+      "user": "can updates keep my memories",
+      "previous": "",
+      "expected": "A matching kernel update replaces kernel8.img. Reflashing a full image resets saved data.",
+      "generated": "A matching kernel update replaces kernel8. img. reflashing a full image resets saved data."
+    },
+    {
+      "split": "test",
+      "user": "let us chat about red dwarf",
+      "previous": "",
+      "expected": "You mentioned Red Dwarf. What do you enjoy about it?",
+      "generated": "You mentioned red dwarf. what do you enjoy about it?"
+    },
+    {
+      "split": "test",
+      "user": "let us chat about computers",
+      "previous": "",
+      "expected": "What are you working on with your computer?",
+      "generated": "What are you working on with your computer?"
+    },
+    {
+      "split": "test",
+      "user": "can we talk about my project",
+      "previous": "",
+      "expected": "Tell me what you want to build and what is happening so far.",
+      "generated": "Tell me what you want to build and what is happening so far."
+    },
+    {
+      "split": "test",
+      "user": "i do not understand that",
+      "previous": "",
+      "expected": "Which part would you like me to explain? I may need more details.",
+      "generated": "Which part would you like me to explain? i may need more details."
+    },
+    {
+      "split": "test",
+      "user": "what will tomorrow bring",
+      "previous": "",
+      "expected": "I do not know enough to answer that reliably. You can teach me or save a sourced fact.",
+      "generated": "Go ahead. what is on your mind?"
+    },
+    {
+      "split": "test",
+      "user": "i think that is wrong",
+      "previous": "",
+      "expected": "Thanks for pointing that out. For a recalled fact, use correct that followed by the corrected text.",
+      "generated": "That sounds good. what happened?"
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i enjoy red dwarf You mentioned Red Dwarf. What do you enjoy about it?",
+      "expected": "What do you like about Red Dwarf?",
+      "generated": "What do you like about red dwarf?"
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i am building a computer What are you working on with your computer?",
+      "expected": "What part of the computer are you working on?",
+      "generated": "What part of the computer are you working on?"
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i have a project idea Tell me what you want to build and what is happening so far.",
+      "expected": "What would you like your project to do?",
+      "generated": "What would you like your project to do?"
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i had a long day Sounds like a long day. Would you like to tell me about it?",
+      "expected": "What made your day tiring?",
+      "generated": "What made your day tiring?"
+    },
+    {
+      "split": "test",
+      "user": "what would you like me to tell you",
+      "previous": "i have good news That sounds good. What happened?",
+      "expected": "What was the good news?",
+      "generated": "What was the good news?"
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Red Dwarf",
+      "previous": "",
+      "expected": "Red Dwarf is the Jupiter Mining Corporation ship at the centre of the comedy.",
+      "generated": "Red dwarf is the jupiter mining corporation ship at the centre of the comedy."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Dave Lister",
+      "previous": "",
+      "expected": "Dave Lister survives the radiation disaster because he is in stasis.",
+      "generated": "Dave lister survives the radiation disaster because he is in stasis."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Arnold Rimmer",
+      "previous": "",
+      "expected": "Arnold Rimmer is Lister's officious bunkmate, brought back as a hologram after the radiation disaster.",
+      "generated": "Arnold rimmer is lister ' s officious bunkmate, brought back as a hologram after the radiation disaster."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about The Cat",
+      "previous": "",
+      "expected": "Cat belongs to a humanoid species descended from Lister's pregnant cat, Frankenstein.",
+      "generated": "Cat belongs to a humanoid species descended from lister ' s pregnant cat, frankenstein."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Holly",
+      "previous": "",
+      "expected": "In Red Dwarf, Holly is the ship's computer.",
+      "generated": "In red dwarf, holly is the ship ' s computer."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Kryten",
+      "previous": "",
+      "expected": "Kryten 2X4B-523P is a Series 4000 mechanoid and a member of the Red Dwarf crew.",
+      "generated": "Kryten 2x4b - 523p is a series 4000 mechanoid and a member of the red dwarf crew."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Kristine Kochanski",
+      "previous": "",
+      "expected": "Kristine Kochanski is Lister's lost love.",
+      "generated": "Kristine kochanski is lister ' s lost love."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Ace Rimmer",
+      "previous": "",
+      "expected": "Ace Rimmer is a brave, popular test pilot from a parallel universe.",
+      "generated": "Ace rimmer is a brave, popular test pilot from a parallel universe."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Hilly",
+      "previous": "",
+      "expected": "Hilly is Holly's counterpart in Parallel Universe, Series II, episode 6.",
+      "generated": "Hilly is holly ' s counterpart in parallel universe, series ii, episode 6."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Frankenstein",
+      "previous": "",
+      "expected": "Frankenstein is the pregnant cat Lister smuggles aboard Red Dwarf.",
+      "generated": "Frankenstein is the pregnant cat lister smuggles aboard red dwarf."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Cloister and Fuchal",
+      "previous": "",
+      "expected": "Cloister is the cat religion's distorted memory of Lister.",
+      "generated": "Cloister is the cat religion ' s distorted memory of lister."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Duane Dibbley",
+      "previous": "",
+      "expected": "Duane Dibbley is Cat's uncool alter ego, introduced in Back to Reality.",
+      "generated": "Duane dibbley is cat ' s uncool alter ego, introduced in back to reality."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Aigburth Arms",
+      "previous": "",
+      "expected": "The Aigburth Arms is the Liverpool pub where baby Lister was found beneath a pool table.",
+      "generated": "The aigburth arms is the liverpool pub where baby lister was found beneath a pool table."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Starbug",
+      "previous": "",
+      "expected": "Starbug is a JMC shuttle used by the crew.",
+      "generated": "Starbug is a jmc shuttle used by the crew."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Blue Midget",
+      "previous": "",
+      "expected": "Blue Midget is another JMC craft used for journeys between a ship and a planetary surface.",
+      "generated": "Blue midget is another jmc craft used for journeys between a ship and a planetary surface."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Skutters",
+      "previous": "",
+      "expected": "Skutters are Red Dwarf's maintenance robots.",
+      "generated": "Skutters are red dwarf ' s maintenance robots."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Talkie Toaster",
+      "previous": "",
+      "expected": "Talkie Toaster is an artificial intelligence devoted to toast with exhausting enthusiasm.",
+      "generated": "Talkie toaster is an artificial intelligence devoted to toast with exhausting enthusiasm."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Simulants",
+      "previous": "",
+      "expected": "Simulants are dangerous artificial beings with biomechanical elements.",
+      "generated": "Simulants are dangerous artificial beings with biomechanical elements."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Holly Hop Drive",
+      "previous": "",
+      "expected": "The Holly Hop Drive is Holly's invention for travelling beyond the crew's own universe.",
+      "generated": "The holly hop drive is holly ' s invention for travelling beyond the crew ' s own universe."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Holly intelligence compression",
+      "previous": "",
+      "expected": "In White Hole, intelligence compression restores Holly's genius but leaves her with less than four minutes of operating life.",
+      "generated": "In white hole, intelligence compression restores holly ' s genius but leaves her with less than four minutes of operating life."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Holograms",
+      "previous": "",
+      "expected": "Rimmer is an electronic reconstruction of a dead crewmate.",
+      "generated": "Rimmer is an electronic reconstruction of a dead crewmate."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about The End",
+      "previous": "",
+      "expected": "The End opens Series I.",
+      "generated": "The end opens series i."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Future Echoes",
+      "previous": "",
+      "expected": "Future Echoes is Series I, episode 2.",
+      "generated": "Future echoes is series i, episode 2."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Kryten episode",
+      "previous": "",
+      "expected": "Kryten, Series II episode 1, introduces the android on the Nova 5.",
+      "generated": "Kryten, series ii episode 1, introduces the android on the nova 5."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Better Than Life",
+      "previous": "",
+      "expected": "Better Than Life is Series II, episode 2.",
+      "generated": "Better than life is series ii, episode 2."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Queeg",
+      "previous": "",
+      "expected": "Queeg is Series II, episode 5.",
+      "generated": "Queeg is series ii, episode 5."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Parallel Universe",
+      "previous": "",
+      "expected": "Parallel Universe closes Series II.",
+      "generated": "Parallel universe closes series ii."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Polymorph",
+      "previous": "",
+      "expected": "Polymorph is Series III, episode 3.",
+      "generated": "Polymorph is series iii, episode 3."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about White Hole",
+      "previous": "",
+      "expected": "White Hole is Series IV, episode 4.",
+      "generated": "White hole is series iv, episode 4."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Dimension Jump",
+      "previous": "",
+      "expected": "Dimension Jump is Series IV, episode 5.",
+      "generated": "Dimension jump is series iv, episode 5."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Quarantine",
+      "previous": "",
+      "expected": "Quarantine is Series V, episode 4.",
+      "generated": "Quarantine is series v, episode 4."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Mr Flibble",
+      "previous": "",
+      "expected": "Mr Flibble is the penguin hand puppet associated with Rimmer in Quarantine.",
+      "generated": "Mr flibble is the penguin hand puppet associated with rimmer in quarantine."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Back to Reality",
+      "previous": "",
+      "expected": "Back to Reality closes Series V.",
+      "generated": "Back to reality closes series v."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Legion",
+      "previous": "",
+      "expected": "Legion is Series VI, episode 2.",
+      "generated": "Legion is series vi, episode 2."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Gunmen of the Apocalypse",
+      "previous": "",
+      "expected": "Gunmen of the Apocalypse is Series VI, episode 3.",
+      "generated": "Gunmen of the apocalypse is series vi, episode 3."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Ouroboros",
+      "previous": "",
+      "expected": "Ouroboros is Series VII, episode 3.",
+      "generated": "Ouroboros is series vii, episode 3."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about The Promised Land",
+      "previous": "",
+      "expected": "The Promised Land is a feature-length Red Dwarf special first broadcast on 9 April 2020.",
+      "generated": "The promised land is a feature - length red dwarf special first broadcast on 9 april 2020."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Red Dwarf novels",
+      "previous": "",
+      "expected": "The novels include Infinity Welcomes Careful Drivers and Better Than Life, followed by Doug Naylor's Last Human and Rob Grant's Backwards.",
+      "generated": "The novels include infinity welcomes careful drivers and better than life, followed by doug naylor ' s last human and rob grant ' s backwards."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Continuity",
+      "previous": "",
+      "expected": "The official FAQ does not settle exactly which Rimmer appears after Series VIII or how he became a hologram again.",
+      "generated": "This dialogue model was trained on a desktop. the train commands adapt the separate seed model."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Aliens",
+      "previous": "",
+      "expected": "The official Red Dwarf FAQ describes the show as a universe without aliens.",
+      "generated": "The official red dwarf faq describes the show as a universe without aliens."
+    },
+    {
+      "split": "test",
+      "user": "please tell me about Smeg",
+      "previous": "",
+      "expected": "Smeg is a fictional swear word created for Red Dwarf by Rob Grant and Doug Naylor.",
+      "generated": "Smeg is a fictional swear word created for red dwarf by rob grant and doug naylor."
+    }
+  ]
+}

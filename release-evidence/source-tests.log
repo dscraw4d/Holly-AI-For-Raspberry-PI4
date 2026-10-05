@@ -1,0 +1,12 @@
+cc -O2 -DHOST_TEST -std=c11 -Wall -Wextra -Werror -Isrc src/search_disk.c src/arithmetic.c src/search_cache.c src/search.c src/web_format.c src/news.c src/aes.c src/modexp.c src/sha256.c src/ssh_ident.c src/ssh_kex.c src/ssh_server.c src/mind.c src/holly.c src/lore.c src/reference.c src/dialogue.c src/dialogue3.c src/dialogue4.c src/language_model.c src/model_store.c src/selftrain.c src/telnet.c src/http_server.c tests/access_test.c -o build/access_test
+./build/access_test
+Telnet negotiation, fragmented lines, guest isolation, HTTP framing, sessions and administration rejection passed
+cc -O2 -DHOST_TEST -std=c11 -Wall -Wextra -Werror -Isrc src/vault.c src/documents.c src/sha256.c src/reference.c src/lore.c tests/documents_test.c -o build/documents_test
+./build/documents_test
+Indexed 6-page cross-boundary lookup: 6 index reads, 16 text sector reads; repeated lookup: 0 new SD reads
+Document tests: SD geometry (3363 slots), catalog-only mount, history retention, 4KiB resume, indexed cross-page search, script labels, corruption and write failure passed
+cc -O2 -std=c11 -Wall -Wextra -Werror -Isrc src/search_disk.c src/arithmetic.c src/search_cache.c src/search.c src/web_format.c src/news.c src/aes.c src/modexp.c src/sha256.c src/ssh_ident.c src/ssh_kex.c src/ssh_server.c src/mind.c src/holly.c src/lore.c src/reference.c src/dialogue.c src/dialogue3.c src/dialogue4.c src/language_model.c src/model_store.c src/selftrain.c tests/assistant_test.c -o build/assistant_test
+./build/assistant_test
+Clock/date offsets and leap day, persistent shared notes, alarm delivery retry and Kryten speech aliases passed
+node tests/web_ui_test.cjs
+PASS: DuckDuckGo chat detection, research meter, pending/speech/readout, error/expired-session handling; visible thinking/research meter, elapsed/slow status, success/error cleanup, news polling during stuck speech, interrupted-fetch notice, face-only layout, hidden replies/settings, Hilly/Holly whole-word switching and persistence, Hillary/Hilary aliases, male/female Google UK voice priority, repeated-stop regression, chat/session, automatic final-speech sending, review/error/interim/long-speech guards, secure-origin gating, microphone cancel, offline feature detection, stale setup cancellation, British voice selection, speech boundary/end, interruption, playback watchdog, HDMI begin/frame/end stream, hands-free rearm/stop and bounded animation

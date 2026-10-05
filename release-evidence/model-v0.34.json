@@ -1,0 +1,15 @@
+{
+  "gradient_checks": 25,
+  "exact_integer_contexts": 100,
+  "initial_test_loss": 4.571058735620518,
+  "trained_test_loss": 2.8062151377611286,
+  "quantized_test_loss": 2.8062689456416945,
+  "scope": "Six small authored test records. No broad language capability or factual accuracy claim.",
+  "samples": {
+    "": "ere shor ce tere comle sire stine s aerte tres aoor. enstern sear chate sa ts ar. reaore.t ar te",
+    "Holly is": " ans in temare bhiole corpltire tsoaes asirs at ts ord f. ors ynet ranthn",
+    "A computer": " iorle she shaue tonteron sters ore anael o. are sint. seans at erentihtt berstonte",
+    "User: hello\nHolly:": " Ihe s. prae Holly es asea line ae tener e tereutirt.",
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx": "le."
+  }
+}

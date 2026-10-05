@@ -1,0 +1,32 @@
+HOLLY OS 0.49.25 - VALIDATION
+
+Real Vault implementation backed by an emulated sector device is tested for:
+full 1,200-character summary + 512-character URL save, journal remount/reboot,
+source and UTC date recall, no-internet guest recall, common query prefixes,
+local lore priority, explicit refresh, replacement verification, failure at
+each of eight chunk/manifest write positions, retaining the old complete entry,
+user-record preservation, saved-result access while another job is pending,
+SSH-only forget, bounded 64-topic capacity without eviction, and modified-chunk
+rejection. The same cache test also passes AddressSanitizer/UndefinedBehaviorSanitizer.
+These are real storage-code checks on an emulated disk, not a physical SD card.
+
+Search command/parser/polling, guest administration rejection, browser meter,
+spoken acknowledgement and cached immediate-response checks pass. Spoken search
+replies use Junior Encyclopedia of Space rather than naming the backend. The
+browser script runs in a simulated DOM/transport/TTS harness, not real Chrome.
+Conversation, news, clock/date/notes/alarms and document-reading regressions pass.
+HTTPS protocol and trust behaviour are unchanged from v0.49.24: DDG 202/JSON
+support was tested there, including rejection of wrong-name, expired and
+untrusted certificates. No trust-store weakening is included.
+
+Pinned Rimmer/smeghead OpenSSH login and wrong-password rejection pass through
+the host adapter. Normal and HDMI-disabled AArch64 kernels pass entry, image/ELF
+match, bounds, unresolved-symbol, real network and exact-credential gates. QEMU
+Pi 4 boot, 105 command cycles and idle soak pass. Final archive CRC and packaged
+credential checks are repeated. Existing SD layouts and document formats do not
+change; installation is kernel-only.
+
+Physical Pi SD durability, real internet fetching, Chrome voice/microphone and
+HDMI operation of this release still need device testing. No physical Pi is
+accessible here. Persistence is bounded and preserves unverified references;
+it is not automatic neural training or verified factual knowledge.

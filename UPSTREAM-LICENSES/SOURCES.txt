@@ -1,0 +1,7 @@
+Raspberry Pi firmware revision: dcca4969e53d2a25e688f0f228a09486786d54c0
+Firmware source/boot asset repository: https://github.com/raspberrypi/firmware/tree/dcca4969e53d2a25e688f0f228a09486786d54c0
+Firmware licence: bootfiles/LICENCE.broadcom (included without modification)
+Upstream Linux source revision reported by firmware extra/git_hash: 703bc4e92a9f98d797f0289bf2adb1e8b04c4bbb
+Device-tree/overlay source: https://github.com/raspberrypi/linux/tree/703bc4e92a9f98d797f0289bf2adb1e8b04c4bbb/arch/arm/boot/dts
+GPL-2.0 licence text is included for device-tree sources where applicable.
+No upstream Linux kernel executable or operating system is included in this Holly image.
